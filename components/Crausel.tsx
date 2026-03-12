@@ -7,7 +7,7 @@ const SLIDES = [
   {
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
     badge: "CUET 2026",
-    heading: "Your Dream of",
+    heading: "Your Dream,",
     highlight: "Our Success",
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",
@@ -15,7 +15,7 @@ const SLIDES = [
   {
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80",
     badge: "CUET 2026",
-    heading: "Your Dream of",
+    heading: "Your Dream,",
     highlight: "Our Success",
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",
@@ -23,7 +23,7 @@ const SLIDES = [
   {
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80",
     badge: "CUET 2026",
-    heading: "Your Dream of",
+    heading: "Your Dream,",
     highlight: "Our Success",
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",
@@ -31,7 +31,7 @@ const SLIDES = [
   {
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80",
     badge: "CUET 2026",
-    heading: "Your Dream of",
+    heading: "Your Dream,",
     highlight: "Our Success",
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",

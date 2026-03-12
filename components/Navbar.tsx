@@ -43,7 +43,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium tracking-wide transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-brand-500 after:transition-all after:duration-300 ${
+              className={`text-md font-medium tracking-wide transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-brand-500 after:transition-all after:duration-300 ${
                 pathname === l.href
                   ? 'text-brand-500 after:w-full'
                   : 'text-dark/70 hover:text-brand-500 after:w-0 hover:after:w-full'

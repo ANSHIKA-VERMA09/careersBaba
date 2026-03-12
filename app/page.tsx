@@ -140,7 +140,6 @@ export default function Home() {
                 <div className="relative h-52 overflow-hidden">
                   <Image src={s.img} alt={s.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent" />
-                  <span className="absolute bottom-4 left-4 text-3xl">{s.icon}</span>
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-xl font-semibold mb-2">{s.title}</h3>

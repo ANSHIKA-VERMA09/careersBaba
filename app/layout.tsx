@@ -6,6 +6,11 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'CareersBaba – Expert Exam Preparation',
   description: 'Focused coaching for CUET, CAT, CLAT, IPMAT and more. Join CareersBaba and ace your exams.',
+  icons:{
+    icon:"/1.jpeg",
+    shortcut:"/1.jpeg",
+    apple:"/1.jpeg"
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
