@@ -108,7 +108,7 @@ export default function UPSCPage() {
               </button>
             </div>
             <div style={{ display: "flex", gap: 32, marginTop: 36 }}>
-              {[["15,000+", "Selections"], ["50+", "Expert Faculty"], ["60+", "Mock Tests"], ["9.2/10", "Student Rating"]].map(([v, l]) => (
+              {[ ["5.0*", "Student Rating"]].map(([v, l]) => (
                 <div key={l}>
                   <div style={{ fontSize: 22, fontWeight: 700, color: "#ffd44d", fontFamily: "'Playfair Display', serif" }}>{v}</div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>{l}</div>
@@ -189,11 +189,11 @@ export default function UPSCPage() {
                     ))}
                   </ul>
                   <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
-                    <div>
+                    {/* <div>
                       <div style={{ fontSize: 22, fontWeight: 700, color: c.color, fontFamily: "'Playfair Display',serif" }}>{c.price}</div>
                       <div style={{ fontSize: 12, color: "#aaa", textDecoration: "line-through" }}>{c.original}</div>
                       <div style={{ fontSize: 11, color: "#888" }}>{c.students} enrolled</div>
-                    </div>
+                    </div> */}
                     <button className="btn-primary" style={{ background: c.color, color: "#fff", padding: "10px 18px", borderRadius: 10, fontSize: 13, fontWeight: 600 }}>
                       Enroll Now
                     </button>

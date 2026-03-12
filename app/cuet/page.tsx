@@ -145,10 +145,8 @@ type SylTab = "Section IA/IB — Languages" | "Section II — Domain" | "Section
 const SYL_TABS: SylTab[] = ["Section IA/IB — Languages", "Section II — Domain", "Section III — General Test"];
 
 const STATS = [
-  ["98,000+", "Students Enrolled"],
-  ["340+", "Partner Colleges"],
-  ["92%", "Score Improvement"],
-  ["4.9★", "Avg Rating"],
+ 
+  ["5.0*", "Avg Rating"],
 ];
 
 const EXAM_DATES = [
@@ -366,13 +364,13 @@ export default function CUETPage() {
                     ))}
                   </ul>
                   <div className="flex items-end justify-between">
-                    <div>
+                    {/* <div>
                       <div className="text-[22px] font-bold font-['Space_Mono',monospace]" style={{ color: c.color }}>
                         {c.price}
                       </div>
                       <div className="text-[12px] text-[#bbb] line-through">{c.original}</div>
                       <div className="text-[11px] text-[#999]">{c.students} enrolled</div>
-                    </div>
+                    </div> */}
                     <button
                       className="text-white px-[18px] py-[10px] rounded-[10px] text-[13px] font-semibold border-none cursor-pointer"
                       style={{ background: c.color }}

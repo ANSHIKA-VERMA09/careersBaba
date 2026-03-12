@@ -73,7 +73,7 @@ const FAQS = [
 type CurrTab = "Foundations" | "ML & AI" | "Deployment";
 const CURR_TABS: CurrTab[] = ["Foundations", "ML & AI", "Deployment"];
 
-const STATS = [["92%", "Placement Rate"], ["400+", "Hiring Partners"], ["50+", "Live Projects"], ["4.9★", "Avg Rating"]];
+const STATS = [ ["5.0★", "Avg Rating"]];
 
 export default function DataSciencePage() {
   const [activeTab, setActiveTab] = useState<CurrTab>("Foundations");
@@ -267,7 +267,7 @@ export default function DataSciencePage() {
                   </ul>
 
                   <div className="flex items-end justify-between">
-                    <div>
+                    {/* <div>
                       <div
                         className="text-[22px] font-bold font-['Space_Mono',monospace]"
                         style={{ color: c.color }}
@@ -282,7 +282,7 @@ export default function DataSciencePage() {
                       <div className="text-[11px] text-[#999]">
                         {c.students} enrolled
                       </div>
-                    </div>
+                    </div> */}
 
                     <button
                       className="text-white px-[18px] py-[10px] rounded-[10px] text-[13px] font-semibold border-none cursor-pointer"
