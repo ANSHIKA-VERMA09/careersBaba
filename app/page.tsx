@@ -16,19 +16,19 @@ const services = [
     title: 'Exam Preparation',
     desc: 'Focused, structured classes designed to help you ace competitive exams—CUET, CAT, CLAT, IPMAT and more.',
     img: 'https://images.unsplash.com/photo-1655337690727-5224680c8c07?auto=format&fit=crop&w=600&q=80',
-    icon: '📚',
+    
   },
   {
     title: 'Expert Tutors',
     desc: 'Learn from experienced mentors who guide you step by step, clarify doubts, and build your confidence.',
     img: 'https://images.unsplash.com/photo-1581090124321-d19ad6d7cd5a?auto=format&fit=crop&w=600&q=80',
-    icon: '🎓',
+   
   },
   {
     title: 'Flexible Scheduling',
     desc: 'Choose batch timings that fit your lifestyle. Morning, evening, and weekend batches available.',
     img: 'https://images.unsplash.com/photo-1493794076453-02c6800c70a2?auto=format&fit=crop&w=600&q=80',
-    icon: '🕐',
+   
   },
 ]
 
@@ -249,7 +249,7 @@ export default function Home() {
           <p className="text-brand-100 mb-8 text-lg">Join CareersBaba today and start your journey to success with expert mentors by your side.</p>
           <Link
             href="/career#apply"
-            className="bg-white text-brand-600 font-bold px-10 py-4 rounded-full hover:bg-brand-50 transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all inline-block"
+            className="bg-white text-brand-600 font-bold px-10 py-4 rounded-full hover:bg-brand-50 transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5  inline-block"
           >
             Start Your Free Demo →
           </Link>

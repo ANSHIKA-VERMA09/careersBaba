@@ -51,11 +51,9 @@ const EXAM_DATA = {
 };
 
 const MENTORS = [
-  { name: "Dr. Rajeev Ahuja", role: "IAS (Retd.) | 22 yrs experience", specialty: "GS & Essay Specialist", color: "#1a3a6b", initials: "RA" },
-  { name: "Priya Mehta", role: "AIR 12, CSE 2019", specialty: "Mains Answer Writing", color: "#2D6A4F", initials: "PM" },
-  { name: "Ankit Sharma", role: "IPS | IIT Delhi", specialty: "CSAT & Aptitude Expert", color: "#7B2FBE", initials: "AS" },
-  { name: "Sunita Rao", role: "MA Political Science, JNU", specialty: "Polity & IR Faculty", color: "#B5451B", initials: "SR" },
-];
+  { name: "Ankur Sir", role: "IAS (Retd.) | 22 yrs experience", specialty: "GS & Essay Specialist", color: "#1a3a6b", initials: "AS" },
+  { name: "Nikita Ma'am", role: "AIR 12, CSE 2019", specialty: "Mains Answer Writing", color: "#2D6A4F", initials: "NM" },
+]
 
 const TOPPERS = [
   { name: "Aryan Kapoor", rank: "AIR 34", batch: "Foundation 2024", quote: "The structured answer writing program at this institute transformed my Mains score completely." },
