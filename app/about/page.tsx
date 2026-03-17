@@ -75,10 +75,10 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-brand-500 text-white rounded-xl p-6 shadow-xl max-w-xs">
+              {/* <div className="absolute -bottom-5 -right-5 bg-brand-500 text-white rounded-xl p-6 shadow-xl max-w-xs">
                 <p className="font-display text-sm italic">"Every student deserves the best shot at their dream."</p>
                 <p className="text-brand-200 text-xs mt-2">— Dr. Anand Verma, Founder</p>
-              </div>
+              </div> */}
             </div>
             <div>
               <span className="text-brand-500 text-sm font-semibold tracking-widest uppercase">Who We Are</span>

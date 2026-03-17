@@ -40,7 +40,7 @@ const services = [
 const testimonials = [
   {
     name: 'Priyanka',
-    exam: 'SSC',
+    exam: 'UPTET',
     text: 'CareerBaba helped me build strong fundamentals in data science. The projects and guidance gave me real confidence.',
     score: 'Completed 10+ Projects'
   },
@@ -94,7 +94,7 @@ export default function Home() {
 
 
       {/* Services */}
-      <section className="py-24 bg-cream">
+      {/* <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-brand-500 text-sm font-semibold tracking-widest uppercase">What We Offer</span>
@@ -123,7 +123,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Us */}
       <section className="py-24 bg-dark text-white overflow-hidden">
@@ -193,15 +193,15 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
                 <div className="text-brand-500 text-3xl font-display font-bold mb-4">"</div>
-                <p className="text-dark/70 text-sm leading-relaxed mb-6">{t.text}</p>
+                <p className="text-dark/70 text-md leading-relaxed mb-6">{t.text}</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold text-dark">{t.name}</div>
-                    <div className="text-dark/40 text-xs">{t.exam}</div>
+                    <div className="font-semibold text-dark text-xl">{t.name}</div>
+                    <div className="text-dark/40 text-lg">{t.exam}</div>
                   </div>
-                  <div className="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1.5 rounded-full border border-brand-200">
+                  {/* <div className="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1.5 rounded-full border border-brand-200">
                     {t.score}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

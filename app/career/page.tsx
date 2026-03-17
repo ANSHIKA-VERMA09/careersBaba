@@ -77,7 +77,7 @@ export default function CareerPage() {
             fill
             className="object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark to-dark/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark to-dark/10" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
