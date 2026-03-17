@@ -38,10 +38,49 @@ const services = [
 
 
 const testimonials = [
-  { name: 'Ravi Sharma', exam: 'CAT 2024', text: 'CareersBaba helped me crack CAT with confidence. The structured approach and mock tests made all the difference!', score: '99.2%ile' },
-  { name: 'Priya Singh', exam: 'CUET 2024', text: 'Joined just 3 months before my exam—got into my dream college thanks to the focused coaching here.', score: 'Top 500' },
-  { name: 'Arjun Mehta', exam: 'CLAT 2024', text: 'The expert tutors are phenomenal. They know exactly what questions will come and prepare you accordingly.', score: 'NLU Delhi' },
-]
+  {
+    name: 'Priyanka',
+    exam: 'SSC',
+    text: 'CareerBaba helped me build strong fundamentals in data science. The projects and guidance gave me real confidence.',
+    score: 'Completed 10+ Projects'
+  },
+  {
+    name: 'Dhruv',
+    exam: 'Gov Exam',
+    text: 'The structured roadmap and hands-on learning made complex topics like ML and Python easy to understand.',
+    score: 'Built ML Models'
+  },
+  {
+    name: 'Shruti',
+    exam: 'UPSC',
+    text: 'I improved my practical skills a lot. The mentorship support really helped me clear my doubts quickly.',
+    score: 'Internship Ready'
+  },
+  {
+    name: 'Vikas',
+    exam: 'Data Science Program',
+    text: 'CareerBaba gave me real-world exposure with projects and datasets. It feels like industry-level learning.',
+    score: 'Portfolio Ready'
+  },
+  {
+    name: 'Mangadeep',
+    exam: 'Data Science Program',
+    text: 'From zero to understanding data analysis and visualization, this journey has been amazing.',
+    score: 'SQL + Python'
+  },
+  {
+    name: 'Aman',
+    exam: 'Data Science Program',
+    text: 'The best part is the practical approach. I can now confidently work on real datasets and problems.',
+    score: 'Real-world Projects'
+  },
+  {
+    name: 'Riya',
+    exam: 'Data Science Program',
+    text: 'The learning environment is very supportive. It helped me stay consistent and improve every day.',
+    score: 'Job Preparation'
+  }
+];
 
 export default function Home() {
   return (

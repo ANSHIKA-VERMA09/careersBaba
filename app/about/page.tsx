@@ -1,34 +1,41 @@
+import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const team = [
-  {
-    name: 'Dr. Anand Verma',
-    role: 'Founder & Head Mentor',
-    img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    bio: 'IIM Ahmedabad alumnus with 15+ years of coaching experience.',
-  },
-  {
-    name: 'Meera Joshi',
-    role: 'CLAT & Legal Aptitude',
-    img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80',
-    bio: 'Advocate & top law school graduate, specializing in legal reasoning.',
-  },
-  {
-    name: 'Rahul Gupta',
-    role: 'Quantitative & Data',
-    img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
-    bio: 'IIT Bombay graduate with a passion for making math intuitive.',
-  },
-]
+
 
 const milestones = [
-  { year: '2014', event: 'CareersBaba founded with a vision to democratize quality education.' },
-  { year: '2016', event: 'Launched online platform reaching students across 50+ cities.' },
-  { year: '2019', event: 'Crossed 1,000 successful CAT & CLAT selections.' },
-  { year: '2022', event: 'Introduced CUET coaching ahead of the national rollout.' },
-  { year: '2025', event: 'Over 5,000 students enrolled, 95% success rate maintained.' },
-]
+  {
+    year: "Dec 2025",
+    event:
+      "CareerBaba was started with a simple goal to help students and freshers understand real-world skills and career paths in tech."
+  },
+  {
+    year: "Jan 2026",
+    event:
+      "Launched the initial version of the platform with basic resources, including career roadmaps, blogs, and guidance for beginners."
+  },
+  {
+    year: "Feb 2026",
+    event:
+      "Introduced practical projects and coding challenges to help learners build hands-on experience in web development."
+  },
+  {
+    year: "Mar 2026",
+    event:
+      "Started building a small but active learner community and began providing mentorship and doubt-solving support."
+  },
+  {
+    year: "Apr 2026",
+    event:
+      "Working on improving the platform with structured learning paths, better UI, and more real-world project content."
+  },
+  {
+    year: "Ongoing",
+    event:
+      "Focused on growing CareerBaba into a trusted platform for career guidance, skill development, and job preparation."
+  }
+];
 
 export default function AboutPage() {
   return (
@@ -132,7 +139,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 bg-cream">
+      {/* <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-brand-500 text-sm font-semibold tracking-widest uppercase">The Team</span>
@@ -154,8 +161,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <h1 className='text-9xl font-extrabold text-center mb-8 '>Alumni of NIT</h1>
+      {/* <AnimatedText/> */}
       {/* CTA */}
       <section className="py-20 bg-brand-500 text-white text-center">
         <div className="max-w-xl mx-auto px-4">
