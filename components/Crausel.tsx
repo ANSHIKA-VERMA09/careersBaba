@@ -108,7 +108,7 @@ export default function Crausel() {
 
   return (
     <section
-      className="relative max-h-96 flex items-center overflow-hidden pt-16"
+      className="relative max-h-3/4 flex items-center overflow-hidden pt-16"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

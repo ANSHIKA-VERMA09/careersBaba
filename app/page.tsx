@@ -1,5 +1,6 @@
 import Crausel from '@/components/Crausel';
 import ListAllCourse from '@/components/ListAllCourse';
+import TextMarquee from '@/components/TextMarquee';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -46,80 +47,11 @@ export default function Home() {
   return (
     <div className='mt-16'>
   
-      {/* <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
-        
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1557989048-03456d01a26e?auto=format&fit=crop&w=1920&q=80"
-            alt="Students studying"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark/10 via-dark/10 to-transparent" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-2xl ">
-         
-
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Your Dream of{' '}
-              <span className="text-brand-400 relative">
-               Our Success
-                <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" fill="none">
-                  <path d="M0 4 Q150 0 300 4" stroke="#f97316" strokeWidth="3" strokeLinecap="round" fill="none" />
-                </svg>
-              </span>
-            </h1>
-
-            <p className="text-white/80 text-lg leading-relaxed mb-10 max-w-xl">
-              Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/career#apply"
-                className="bg-brand-500 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-brand-600 transition-all hover:shadow-lg hover:shadow-brand-500/30 hover:-translate-y-0.5"
-              >
-                Enroll Now — Free Demo
-              </Link>
-              <Link
-                href="/about"
-                className="border border-white/40 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all"
-              >
-                Learn More ↓
-              </Link>
-            </div>
-          </div>
-        </div>
-
-      
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <span className="text-white/50 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent" />
-        </div>
-      </section> */}
+     
 
       <Crausel/>
-
-      {/* Stats
-      <section className="bg-brand-500 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center text-white">
-                <div className="font-display text-3xl sm:text-4xl font-bold mb-1">{s.value}</div>
-                <div className="text-brand-100 text-sm">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-
-      {/* list all courses */}
-  <ListAllCourse/>
+      <TextMarquee/>
+      <ListAllCourse/>
 
 
       {/* Services */}
