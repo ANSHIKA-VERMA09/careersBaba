@@ -1,3 +1,4 @@
+import AboutCareersBaba from '@/components/AboutCareersBaba';
 import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -108,6 +109,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Content */}
+      <AboutCareersBaba/>
 
       {/* Timeline */}
       <section className="py-24 bg-white">

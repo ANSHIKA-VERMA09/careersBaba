@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="mt-6 flex gap-4">
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/yourpage"
+                href="https://www.facebook.com/share/17ktc9MmSD/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 text-white flex items-center justify-center transition-colors shadow-md"
@@ -120,6 +120,13 @@ export default function Footer() {
 
                   <FaPhone size={20} color='#22D3EE' />
                   <span className='text-xl'> +91 98977 53555</span>
+                </a>
+              </p>
+               <p className="flex items-start gap-3">
+                <a href='tel:++91 79069 98255' className='flex items-center justify-center gap-1'>
+
+                  <FaPhone size={20} color='#22D3EE' />
+                  <span className='text-xl'> +91 79069 98255</span>
                 </a>
               </p>
               <p className="flex items-start gap-3">

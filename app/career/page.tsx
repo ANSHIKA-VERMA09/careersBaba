@@ -142,7 +142,7 @@ export default function CareerPage() {
                     <div className="text-dark/50 text-xs flex items-center gap-1">
                       <span>⏱</span> {course.duration}
                     </div>
-                    <div className="font-display font-bold text-brand-500 text-lg">{course.price}</div>
+                    {/* <div className="font-display font-bold text-brand-500 text-lg">{course.price}</div> */}
                   </div>
                   <ul className="space-y-2 mb-5">
                     {course.features.map((f) => (
@@ -221,7 +221,7 @@ export default function CareerPage() {
       </section>
 
       {/* Enrollment Form */}
-      <section id="apply" className="py-24 bg-dark text-white">
+      {/* <section id="apply" className="py-24 bg-dark text-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-brand-400 text-sm font-semibold tracking-widest uppercase">Enroll Today</span>
@@ -304,7 +304,7 @@ export default function CareerPage() {
             </form>
           )}
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

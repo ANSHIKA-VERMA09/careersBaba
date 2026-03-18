@@ -350,9 +350,9 @@ export default function UPSCPage() {
                 </h4>
 
                 {/* Role */}
-                <p className="text-[12px] font-semibold mb-2" style={{ color: m.color }}>
+                {/* <p className="text-[12px] font-semibold mb-2" style={{ color: m.color }}>
                   {m.role}
-                </p>
+                </p> */}
 
                 {/* Specialty */}
                 <p className="text-[12px] text-[#888] leading-[1.55]">

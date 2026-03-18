@@ -9,6 +9,9 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'Career', href: '/career' },
   { label: 'About', href: '/about' },
+  
+  { label: 'Courses', href: '/home#courses' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
