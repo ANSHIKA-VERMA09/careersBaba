@@ -1,6 +1,7 @@
 import Crausel from '@/components/Crausel';
 import ListAllCourse from '@/components/ListAllCourse';
 import TextMarquee from '@/components/TextMarquee';
+import Video from '@/components/Video';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -161,7 +162,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1752649936371-72629121227d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxzdHVkZW50JTIwd2l0aCUyMHRlYWNoZXJ8ZW58MHx8MHx8fDA%3D"
+                  src="/2.jpeg"
                   alt="Coaching classroom"
                   fill
                   className="object-cover"
@@ -181,6 +182,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* <Video/> */}
 
       {/* Testimonials */}
       <section className="py-24 bg-cream">

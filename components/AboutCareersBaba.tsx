@@ -61,7 +61,7 @@ export default function AboutCareersBaba() {
   ];
 
   return (
-    <div className="bg-white text-gray-900 font-sans antialiased">
+    <div className="bg-white text-gray-900 font-sans antialiased px-72">
 
     
 
@@ -75,7 +75,7 @@ export default function AboutCareersBaba() {
           </div>
           <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-tight mb-6">
             Transforming Students Into{" "}
-            <em className="italic text-amber-500 not-italic">Successful</em> Professionals
+            <em className="italic text-amber-500">Successful</em> Professionals
           </h1>
           <p className="text-gray-500 text-base leading-relaxed max-w-lg">
             At CareersBaba, we believe that the right guidance can transform a student's future.
@@ -84,25 +84,17 @@ export default function AboutCareersBaba() {
           </p>
         </div>
 
-        {/* Right — dark stat grid */}
-        <div className="bg-gray-950 flex items-center justify-center p-10 relative overflow-hidden">
-          {/* Grid pattern overlay */}
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(0deg,transparent,transparent 39px,#D4A843 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#D4A843 40px)",
-            }}
-          />
-          <div className="relative z-10 grid grid-cols-2 gap-px bg-white/10 w-full max-w-sm">
+       
+  
+          <div className="relative z-10 grid grid-cols-2  gap-px  w-max-w-sm">
             {stats.map((s) => (
-              <div key={s.label} className="bg-gray-950 flex flex-col items-center justify-center py-9 px-4">
-                <span className="text-3xl font-black text-amber-500 leading-none mb-2">{s.number}</span>
-                <span className="text-xs tracking-widest uppercase text-white/40 font-medium">{s.label}</span>
+              <div key={s.label} className="flex flex-col border-r border-b border-t  items-center justify-center py-9 px-4">
+                <span className="text-5xl font-black text-amber-500 leading-none mb-2">{s.number}</span>
+                <span className="text-xs tracking-widest uppercase  font-medium">{s.label}</span>
               </div>
             ))}
           </div>
-        </div>
+      
       </section>
 
       {/* ── WHO WE ARE ── */}

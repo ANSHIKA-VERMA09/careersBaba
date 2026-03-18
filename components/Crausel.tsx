@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SLIDES = [
   {
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
+    image: "/2.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -13,7 +13,7 @@ const SLIDES = [
     tag: "🎯 #1 CUET Platform in India",
   },
   {
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80",
+    image: "/3.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -21,7 +21,7 @@ const SLIDES = [
     tag: "🎯 #1 CUET Platform in India",
   },
   {
-    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80",
+    image: "/4.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -29,7 +29,7 @@ const SLIDES = [
     tag: "🎯 #1 CUET Platform in India",
   },
   {
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80",
+    image: "/5.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -128,7 +128,7 @@ export default function Crausel() {
             sizes="100vw"
           />
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
       ))}
@@ -143,7 +143,7 @@ export default function Crausel() {
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-[fadeSlideUp_0.6s_ease_both]"
           >
             <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-            <span className="text-orange-300 text-xs font-bold tracking-widest uppercase font-mono">
+            <span className="text-orange-300 text-md font-bold tracking-widest uppercase font-mono">
               {slide.badge}
             </span>
           </div>
