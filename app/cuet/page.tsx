@@ -493,7 +493,7 @@ export default function CUETPage() {
         </section>
 
         {/* TOPPERS / RESULTS */}
-        <section className="py-12">
+        {/* <section className="py-12">
           <div className="text-center mb-10">
             <p className="text-[12px] font-bold tracking-[0.12em] text-[#1a3fa8] uppercase mb-[10px] font-['Space_Mono',monospace]">
               Success Stories
@@ -522,7 +522,7 @@ export default function CUETPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* FAQs */}
         <section className="py-12 pb-18">

@@ -477,7 +477,7 @@ export default function TeacherPage() {
           </div>
 
           {/* Review Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {REVIEWS.map((r, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 border border-[#ebe9e2] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
                 <FaQuoteLeft size={22} color="#C0392B" className="opacity-30 mb-4" />
@@ -506,7 +506,7 @@ export default function TeacherPage() {
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
         </section>
 
         {/* ── FAQs ── */}

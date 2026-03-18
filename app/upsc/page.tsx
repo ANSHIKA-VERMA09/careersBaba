@@ -385,7 +385,7 @@ export default function UPSCPage() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         {TOPPERS.map((t, i) => (
           <div
             key={i}
@@ -397,7 +397,7 @@ export default function UPSCPage() {
               flex flex-col
             "
           >
-            {/* Quote mark */}
+            
             <div
               className="text-[36px] leading-none mb-4 text-[#1a3a6b] select-none"
               style={{ fontFamily: "Georgia, serif" }}
@@ -405,32 +405,32 @@ export default function UPSCPage() {
               &ldquo;
             </div>
 
-            {/* Quote text — grows to fill card */}
+           
             <p className="text-[14px] text-[#555] leading-[1.75] mb-5 flex-1">
               {t.quote}
             </p>
 
-            {/* Footer */}
+         
             <div className="flex items-center gap-3 pt-4 border-t border-[#f0efe9]">
-              {/* Avatar */}
+             
               <div className="w-11 h-11 rounded-full bg-[#1a3a6b] text-white flex items-center justify-center font-bold text-[16px] flex-shrink-0">
                 {t.name[0]}
               </div>
 
-              {/* Name + meta */}
+           
               <div className="min-w-0">
                 <div className="font-bold text-[14px] text-[#1a1a1a] truncate">{t.name}</div>
                 <div className="text-[12px] text-[#888] truncate">{t.batch}</div>
               </div>
 
-              {/* Rank badge */}
+             
               <span className="ml-auto flex-shrink-0 bg-[#eef1f8] text-[#1a3a6b] text-[10px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
                 {t.rank}
               </span>
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
     </section>
 
