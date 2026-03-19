@@ -1,4 +1,5 @@
 'use client'
+import CareersPage from '@/components/Carrerspage'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -111,9 +112,8 @@ export default function CareerPage() {
                 <button
                   key={cat}
                   onClick={() => setActiveTab(cat)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeTab === cat ? 'bg-brand-500 text-white shadow-sm' : 'bg-white text-dark/60 hover:bg-brand-50 hover:text-brand-500 border border-orange-100'
-                  }`}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeTab === cat ? 'bg-brand-500 text-white shadow-sm' : 'bg-white text-dark/60 hover:bg-brand-50 hover:text-brand-500 border border-orange-100'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -192,6 +192,10 @@ export default function CareerPage() {
         </div>
       </section>
 
+      <CareersPage/>
+
+     
+
       {/* FAQ */}
       <section className="py-24 bg-cream">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -220,91 +224,7 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* Enrollment Form */}
-      {/* <section id="apply" className="py-24 bg-dark text-white">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-brand-400 text-sm font-semibold tracking-widest uppercase">Enroll Today</span>
-            <h2 className="font-display text-3xl font-bold mt-2">Book Your Free Demo</h2>
-            <p className="text-white/50 mt-3 text-sm">No payment required. Just fill in your details and we'll reach out.</p>
-          </div>
 
-          {submitted ? (
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-12 text-center">
-              <div className="text-5xl mb-4">🎉</div>
-              <h3 className="font-display text-2xl font-bold text-brand-400 mb-2">You're on the list!</h3>
-              <p className="text-white/60">Our team will contact you within 24 hours to schedule your free demo session.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-white/60 text-xs mb-1.5 uppercase tracking-wide">Full Name *</label>
-                  <input
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-400 text-sm"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white/60 text-xs mb-1.5 uppercase tracking-wide">Phone Number *</label>
-                  <input
-                    type="tel"
-                    required
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-400 text-sm"
-                    placeholder="+91 9XXXXXXXXX"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-white/60 text-xs mb-1.5 uppercase tracking-wide">Email Address</label>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-400 text-sm"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label className="block text-white/60 text-xs mb-1.5 uppercase tracking-wide">Target Exam *</label>
-                <select
-                  required
-                  value={form.exam}
-                  onChange={(e) => setForm({ ...form, exam: e.target.value })}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-400 text-sm"
-                >
-                  <option value="" disabled className="bg-dark">Select your target exam</option>
-                  {['CUET', 'CAT', 'CLAT', 'IPMAT', 'Other'].map((e) => (
-                    <option key={e} value={e} className="bg-dark">{e}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-white/60 text-xs mb-1.5 uppercase tracking-wide">Message (Optional)</label>
-                <textarea
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  rows={3}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-400 text-sm resize-none"
-                  placeholder="Any specific questions or requirements?"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-brand-500 text-white font-bold py-4 rounded-xl hover:bg-brand-600 transition-colors text-sm tracking-wide"
-              >
-                Book My Free Demo Session →
-              </button>
-            </form>
-          )}
-        </div>
-      </section> */}
     </div>
   )
 }

@@ -160,12 +160,12 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             placeholder="Rahul Sharma"
-                                            className="w-full rounded-xl border border-slate-200  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-amber-400"
+                                            className="w-full rounded-xl border border-slate-200  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-state-400"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="mb-2 block text-sm font-medium text-slate-900">
+                                        <label className="mb-2 block text-lg font-medium text-slate-900">
                                             Email
                                         </label>
                                         <input
@@ -176,14 +176,14 @@ export default function ContactPage() {
                                             required
                                             placeholder="you@email.com"
                                             className="w-full rounded-xl border border-slate-200
-                                              px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-amber-400"
+                                              px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-slate-400"
                                         />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                     <div>
-                                        <label className="mb-2 block text-sm font-medium text-slate-900">
+                                        <label className="mb-2 block text-lg font-medium text-slate-900">
                                             Phone
                                         </label>
                                         <input
@@ -191,12 +191,12 @@ export default function ContactPage() {
                                             value={form.phone}
                                             onChange={handleChange}
                                             placeholder="+91 9XXXXXXXX"
-                                            className="w-full rounded-xl border border-slate-200  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-amber-400"
+                                            className="w-full rounded-xl border border-slate-200  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-slate-400"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="mb-2 block text-sm font-medium text-slate-900">
+                                        <label className="mb-2 block text-lg font-medium text-slate-900">
                                             Subject
                                         </label>
                                         <select
@@ -204,7 +204,7 @@ export default function ContactPage() {
                                             value={form.subject}
                                             onChange={handleChange}
                                             required
-                                            className="w-full rounded-xl border border-white/10  px-4 py-3 text-xl  outline-none focus:border-slate-400"
+                                            className="w-full rounded-xl border  px-4 py-3 text-xl  outline-none focus:border-slate-400"
                                         >
                                             <option value="">Select exam</option>
                                             <option value="CUET">CUET</option>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <div>
-                                    <label className="mb-2 block text-sm font-medium  text-slate-900">
+                                    <label className="mb-2 block text-lg font-medium  text-slate-900">
                                         Message
                                     </label>
                                     <textarea
@@ -227,7 +227,7 @@ export default function ContactPage() {
                                         required
                                         rows={6}
                                         placeholder="Tell us how we can help..."
-                                        className="w-full rounded-xl border border-white/10  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-amber-400"
+                                        className="w-full rounded-xl border border-slate-200  px-4 py-3 text-xl  outline-none placeholder:text-slate-500 focus:border-slate-400"
                                     />
                                 </div>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
                     {/* Right side */}
                     <div className="space-y-6">
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
-                            <p className="text-sm font-semibold text-amber-400">Connect With Us</p>
+                            <p className="text-lg font-semibold text-black ">Connect With Us</p>
                             <h2 className="mt-2 text-2xl font-bold">Stay connected</h2>
                             <p className="mt-3 text-md leading-6 text-slate-000">
                                 Follow CareersBaba for exam updates, preparation tips, mock tests, and student guidance.
@@ -266,12 +266,12 @@ export default function ContactPage() {
                             <div className="mt-4 space-y-3 text-sm">
                                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                                     <span className="text-slate-900 text-lg">Mon - Sat</span>
-                                    <span className="font-medium text-amber-400 text-xl">08:00 AM - 7:00 PM</span>
+                                    <span className="font-medium text-black  text-xl">08:00 AM - 7:00 PM</span>
                                 </div>
 
                                 <div className="flex items-center justify-between">
                                     <span className="text-slate-900 text-lg">Sunday</span>
-                                    <span className="font-medium text-red-400 text-xl">Closed</span>
+                                    <span className="font-medium text-black text-xl">Closed</span>
                                 </div>
                             </div>
                         </div>
