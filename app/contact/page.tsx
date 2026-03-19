@@ -217,7 +217,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <div>
-                                    <label className="mb-2 block text-sm font-medium text-slate-900">
+                                    <label className="mb-2 block text-sm font-medium  text-slate-900">
                                         Message
                                     </label>
                                     <textarea
