@@ -475,59 +475,72 @@ export default function GovJobsPage() {
         </section>
 
         {/* FREE RESOURCES */}
-        <section className="pb-12">
-          <div className="bg-[linear-gradient(135deg,#06112a,#0f2044)] rounded-3xl px-10 py-12 border border-[rgba(255,153,0,0.15)] relative overflow-hidden">
-            {/* Decorative circle */}
-            <div className="absolute -top-10 -right-10 w-[250px] h-[250px] rounded-full bg-[rgba(217,119,6,0.12)]" />
+       <section className="pb-12">
+  <div className="bg-[linear-gradient(135deg,#06112a,#0f2044)] rounded-3xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 border border-[rgba(255,153,0,0.15)] relative overflow-hidden">
 
-            {/* Watermark */}
-            <div className="absolute bottom-6 right-10 pointer-events-none text-[rgba(255,153,0,0.05)] font-mono text-[11px] leading-loose hidden lg:block">
-              <div>Part XIV — Services Under the Union and States</div>
-              <div>Article 309 — Recruitment &amp; Conditions of Service</div>
-              <div>Article 311 — Dismissal, Removal, Reduction in Rank</div>
+    {/* Decorative circle */}
+    <div className="absolute -top-10 -right-10 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] rounded-full bg-[rgba(217,119,6,0.12)]" />
+
+    {/* Watermark */}
+    <div className="absolute bottom-6 right-10 pointer-events-none text-[rgba(255,153,0,0.05)] font-mono text-[11px] leading-loose hidden lg:block">
+      <div>Part XIV — Services Under the Union and States</div>
+      <div>Article 309 — Recruitment &amp; Conditions of Service</div>
+      <div>Article 311 — Dismissal, Removal, Reduction in Rank</div>
+    </div>
+
+    {/* Main grid: stacks on mobile, side-by-side on lg+ */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
+
+      {/* Left: Text content */}
+      <div>
+        <p className="text-xs font-bold tracking-[0.12em] text-[#ff9900] uppercase mb-2.5 font-sans">
+          100% Free
+        </p>
+        <h2 className="font-serif text-[clamp(1.5rem,4vw,2rem)] text-white mb-3.5">
+          Free Study Resources
+        </h2>
+        <p className="text-white/60 text-sm sm:text-[15px] leading-relaxed font-sans">
+          Not sure which exam to target? Start with our free resources — no login required.
+          Test your GK, explore exam patterns, and attempt a free mock test before committing
+          to any course.
+        </p>
+      </div>
+
+      {/* Right: Resource cards grid */}
+      <div className="grid grid-cols-2 gap-3 sm:gap-3.5">
+        {RESOURCES.map((r, i) => (
+          <div
+            key={i}
+            className="bg-white/[0.06] rounded-2xl px-3 py-4 sm:px-4 sm:py-[18px] border border-white/10 flex flex-col gap-2 sm:gap-2.5 cursor-pointer transition-transform duration-300 hover:-translate-y-[3px]"
+          >
+            <div
+              className="w-9 h-9 sm:w-[42px] sm:h-[42px] rounded-[10px] flex items-center justify-center"
+              style={{ background: r.color + "30" }}
+            >
+              <r.icon size={16} color={r.color} className="sm:hidden" />
+              <r.icon size={18} color={r.color} className="hidden sm:block" />
             </div>
-
-            <div className="grid grid-cols-2 gap-12 items-center relative">
-              <div>
-                <p className="text-xs font-bold tracking-[0.12em] text-[#ff9900] uppercase mb-2.5 font-sans">
-                  100% Free
-                </p>
-                <h2 className="font-serif text-[clamp(1.6rem,2.5vw,2rem)] text-white mb-3.5">
-                  Free Study Resources
-                </h2>
-                <p className="text-white/60 text-[15px] leading-relaxed font-sans">
-                  Not sure which exam to target? Start with our free resources — no login required. Test your GK, explore exam patterns, and attempt a free mock test before committing to any course.
-                </p>
+            <div>
+              <div className="text-xs sm:text-[13px] font-semibold text-white mb-[3px] leading-snug">
+                {r.label}
               </div>
-
-              <div className="grid grid-cols-2 gap-3.5">
-                {RESOURCES.map((r, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/[0.06] rounded-2xl px-4 py-[18px] border border-white/10 flex flex-col gap-2.5 cursor-pointer transition-transform duration-300 hover:-translate-y-[3px]"
-                  >
-                    <div
-                      className="w-[42px] h-[42px] rounded-[10px] flex items-center justify-center"
-                      style={{ background: r.color + "30" }}
-                    >
-                      <r.icon size={18} color={r.color} />
-                    </div>
-                    <div>
-                      <div className="text-[13px] font-semibold text-white mb-[3px]">{r.label}</div>
-                      <div className="text-xs text-white/50 font-sans">{r.desc}</div>
-                    </div>
-                    <div
-                      className="flex items-center gap-1 text-xs font-semibold mt-0.5"
-                      style={{ color: r.color }}
-                    >
-                      Access Free <FaArrowRight size={11} />
-                    </div>
-                  </div>
-                ))}
+              <div className="text-[11px] sm:text-xs text-white/50 font-sans leading-snug">
+                {r.desc}
               </div>
+            </div>
+            <div
+              className="flex items-center gap-1 text-[11px] sm:text-xs font-semibold mt-0.5"
+              style={{ color: r.color }}
+            >
+              Access Free <FaArrowRight size={10} />
             </div>
           </div>
-        </section>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section> 
 
         {/* CURRICULUM */}
         <section className="pb-12">
