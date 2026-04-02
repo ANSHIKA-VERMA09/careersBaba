@@ -1,10 +1,5 @@
 "use client"
 import { useState } from "react";
-import {
-  FaChevronDown, FaStar, FaClock, FaCheckCircle, FaBell,
-  FaArrowRight, FaCode, FaDatabase, FaBrain, FaChartBar,
-  FaPython, FaRobot, FaFlask, FaLayerGroup, FaShieldAlt
-} from "react-icons/fa";
 
 const NAV_LINKS = ["Overview", "Courses", "Free Resources", "Curriculum", "Mentors", "Results", "FAQs"];
 
@@ -16,10 +11,10 @@ const COURSES = [
 ];
 
 const RESOURCES = [
-  { icon: FaPython, label: "Python Cheatsheet", desc: "Pandas, NumPy, Scikit-learn", color: "#0f7275" },
-  { icon: FaDatabase, label: "SQL Practice Set", desc: "100+ interview-level queries", color: "#6a3de8" },
-  { icon: FaChartBar, label: "Free Mini Project", desc: "End-to-end EDA on real dataset", color: "#c4412f" },
-  { icon: FaBrain, label: "ML Roadmap PDF", desc: "Structured 6-month plan", color: "#1e5f30" },
+  { label: "Python Cheatsheet", desc: "Pandas, NumPy, Scikit-learn", color: "#0f7275", icon: "🐍" },
+  { label: "SQL Practice Set", desc: "100+ interview-level queries", color: "#6a3de8", icon: "🗄️" },
+  { label: "Free Mini Project", desc: "End-to-end EDA on real dataset", color: "#c4412f", icon: "📊" },
+  { label: "ML Roadmap PDF", desc: "Structured 6-month plan", color: "#1e5f30", icon: "🧠" },
 ];
 
 const CURRICULUM_DATA = {
@@ -70,225 +65,166 @@ const FAQS = [
   { q: "Which tools and languages will I learn?", a: "Core stack: Python, SQL, Pandas, Scikit-learn, TensorFlow/PyTorch, Tableau/Power BI, and cloud platforms (AWS/GCP). For the advanced track: Docker, Airflow, FastAPI, and HuggingFace transformers." },
 ];
 
-type CurrTab = "Foundations" | "ML & AI" | "Deployment";
-const CURR_TABS: CurrTab[] = ["Foundations", "ML & AI", "Deployment"];
+const CURR_TABS = ["Foundations", "ML & AI", "Deployment"];
 
-const STATS = [ ["5.0★", "Avg Rating"]];
+const STATS = [
+  ["12,000+", "Placements"],
+  ["400+", "Hiring Partners"],
+  ["4.9★", "Avg Rating"],
+  ["92%", "Placement Rate"],
+];
 
 export default function DataSciencePage() {
-  const [activeTab, setActiveTab] = useState<CurrTab>("Foundations");
-  const [openFaq, setOpenFaq] = useState<null | number>(null);
-  const [activeNav, setActiveNav] = useState("Overview");
+  const [activeTab, setActiveTab] = useState("Foundations");
+  const [openFaq, setOpenFaq] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#F4F5F7", minHeight: "100vh", color: "#111" }}>
+    <div className="font-sans bg-[#F4F5F7] min-h-screen text-gray-900 mt-8">
 
-
+   
 
       {/* HERO */}
-      <section style={{ background: "linear-gradient(135deg, #071a1b 0%, #0f2a2b 50%, #0a2040 100%)", padding: "72px 24px 80px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundImage: "radial-gradient(circle at 80% 20%, rgba(15,114,117,0.18) 0%, transparent 55%), radial-gradient(circle at 10% 80%, rgba(106,61,232,0.12) 0%, transparent 50%)" }} />
-        {/* grid lines */}
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "48px 48px", pointerEvents: "none" }} />
+      <section className="relative bg-[#071a1b] overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#0f7275]/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#6a3de8]/10 rounded-full blur-[100px]" />
+          <div className="absolute inset-0" style={{backgroundImage:"linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)",backgroundSize:"48px 48px"}} />
+        </div>
 
-        <div className="max-w-[1140px] mx-auto grid grid-cols-[1fr_380px] gap-12 items-center relative">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-[rgba(15,114,117,0.2)] border border-[rgba(15,114,117,0.4)] rounded-[20px] px-[14px] py-[5px] mb-[22px]">
-              <span className="w-[7px] h-[7px] rounded-full bg-[#2de0a7] inline-block" />
-              <span className="text-[12px] text-[#2de0a7] font-['Space_Mono',monospace] font-semibold">
-                India's #1 Data Science Platform
-              </span>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+            {/* Left: Copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-[#0f7275]/20 border border-[#0f7275]/40 rounded-full px-3.5 py-1.5 mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#2de0a7] animate-pulse inline-block" />
+                <span className="text-[11px] sm:text-[12px] text-[#2de0a7] font-bold tracking-wider font-mono">India's #1 Data Science Platform</span>
+              </div>
+
+              <h1 className="font-mono text-[clamp(1.9rem,5vw,3.1rem)] text-white mb-4 leading-[1.18] tracking-tight">
+                Launch Your Career in<br />
+                <span className="text-[#2de0a7]">Data Science & AI</span>
+              </h1>
+
+              <p className="text-[15px] sm:text-[16px] text-white/60 leading-relaxed mb-8 max-w-[500px]">
+                From Python basics to production ML — a structured, mentor-led program built for real job outcomes. Over{" "}
+                <strong className="text-white">12,000+ placements</strong> at top tech, consulting, and product companies.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                <button className="bg-[#2de0a7] text-[#071a1b] px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl text-[14px] sm:text-[15px] font-bold hover:bg-[#22c992] transition-colors">
+                  Explore Courses →
+                </button>
+                <button className="bg-white/7 text-white px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl text-[14px] sm:text-[15px] font-semibold border border-white/20 hover:bg-white/10 transition-colors">
+                  ▶ Watch Free Demo
+                </button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-10 pt-8 border-t border-white/10">
+                {STATS.map(([v, l]) => (
+                  <div key={l}>
+                    <div className="text-[20px] sm:text-[22px] font-bold text-[#2de0a7] font-mono">{v}</div>
+                    <div className="text-[11px] sm:text-[12px] text-white/40 mt-0.5">{l}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <h1 className="font-['Space_Mono',monospace] text-[clamp(2rem,4vw,3rem)] text-white mb-4 leading-[1.2] tracking-[-0.04em]">
-              Launch Your Career in<br />
-              <span className="text-[#2de0a7]">Data Science & AI</span>
-            </h1>
+            {/* Right: Lead Form */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
+              <h3 className="font-mono text-[17px] sm:text-[18px] font-bold text-[#0f2a2b] mb-1.5 tracking-tight">
+                Get a Free Career Roadmap
+              </h3>
+              <p className="text-[13px] text-gray-400 mb-6">Tailored to your background & goals</p>
 
-            <p className="text-[16px] text-[rgba(255,255,255,0.65)] leading-[1.75] mb-8 max-w-[500px]">
-              From Python basics to production ML — a structured, mentor-led program built for real job outcomes. Over{" "}
-              <strong className="text-white">12,000+ placements</strong> at top tech, consulting, and product companies.
-            </p>
-
-            <div className="flex gap-3 flex-wrap">
-              <button className="bg-[#2de0a7] text-[#071a1b] px-[28px] py-[13px] rounded-[10px] text-[15px] font-bold border-none cursor-pointer">
-                Explore Courses →
-              </button>
-
-              <button className="bg-[rgba(255,255,255,0.07)] text-white px-[28px] py-[13px] rounded-[10px] text-[15px] font-semibold border border-[rgba(255,255,255,0.2)] cursor-pointer">
-                ▶ Watch Free Demo
-              </button>
-            </div>
-
-            <div className="flex gap-9 mt-10">
-              {STATS.map(([v, l]) => (
-                <div key={l}>
-                  <div className="text-[22px] font-bold text-[#2de0a7] font-['Space_Mono',monospace]">
-                    {v}
-                  </div>
-                  <div className="text-[12px] text-[rgba(255,255,255,0.45)] mt-[3px]">
-                    {l}
-                  </div>
+              {[["Full Name", "text", "Priya Sharma"], ["Mobile Number", "tel", "+91 9876543210"], ["Email", "email", "priya@email.com"]].map(([label, type, ph]) => (
+                <div key={label} className="mb-4">
+                  <label className="text-[12px] font-semibold text-gray-500 block mb-1">{label}</label>
+                  <input type={type} placeholder={ph}
+                    className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-[14px] outline-none text-gray-700 focus:border-[#0f7275] transition-colors" />
                 </div>
               ))}
-            </div>
-          </div>
 
-          {/* Lead form */}
-          <div className="bg-white rounded-[20px] p-8 shadow-[0_24px_64px_rgba(0,0,0,0.4)]">
-            <h3 className="font-['Space_Mono',monospace] text-[18px] font-bold text-[#0f2a2b] mb-[6px] tracking-[-0.03em]">
-              Get a Free Career Roadmap
-            </h3>
-
-            <p className="text-[13px] text-[#888] mb-6">
-              Tailored to your background & goals
-            </p>
-
-            {[["Full Name", "text", "Priya Sharma"], ["Mobile Number", "tel", "+91 9876543210"], ["Email", "email", "priya@email.com"]].map(([label, type, ph]) => (
-              <div key={label} className="mb-4">
-                <label className="text-[12px] font-semibold text-[#555] block mb-[5px]">
-                  {label}
-                </label>
-
-                <input
-                  type={type}
-                  placeholder={ph}
-                  className="w-full px-[14px] py-[11px] rounded-[8px] border-[1.5px] border-[#e0e2ea] text-[14px] outline-none text-[#333] box-border"
-                />
+              <div className="mb-5">
+                <label className="text-[12px] font-semibold text-gray-500 block mb-1">Experience Level</label>
+                <select className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-[14px] text-gray-700 bg-white outline-none focus:border-[#0f7275] transition-colors">
+                  <option>Complete Beginner</option>
+                  <option>Some Python Knowledge</option>
+                  <option>Working Professional</option>
+                </select>
               </div>
-            ))}
 
-            <div className="mb-5">
-              <label className="text-[12px] font-semibold text-[#555] block mb-[5px]">
-                Experience Level
-              </label>
+              <button className="w-full bg-[#0f7275] text-white py-3.5 rounded-xl text-[15px] font-bold hover:bg-[#0a5d60] transition-colors">
+                Book Free Session
+              </button>
 
-              <select className="w-full px-[14px] py-[11px] rounded-[8px] border-[1.5px] border-[#e0e2ea] text-[14px] text-[#333] bg-white">
-                <option>Complete Beginner</option>
-                <option>Some Python Knowledge</option>
-                <option>Working Professional</option>
-              </select>
+              <p className="text-[11px] text-gray-400 text-center mt-3">No spam. No pressure. 100% free.</p>
             </div>
-
-            <button className="w-full bg-[#0f7275] text-white py-[14px] rounded-[10px] text-[15px] font-bold border-none cursor-pointer">
-              Book Free Session
-            </button>
           </div>
         </div>
       </section>
 
       {/* TICKER */}
-      <div className="bg-[#0f2a2b] py-[10px] px-6">
-        <div className="max-w-[1140px] mx-auto flex items-center gap-4 overflow-hidden">
-
-          <span className="bg-[#2de0a7] text-[#071a1b] text-[11px] font-bold px-[10px] py-[3px] rounded-[4px] whitespace-nowrap font-['Space_Mono',monospace]">
-            LIVE
-          </span>
-
-          <div className="flex gap-9 overflow-hidden">
+      <div className="bg-[#0f2a2b] py-2.5 px-4 overflow-hidden">
+        <div className="max-w-6xl mx-auto flex items-center gap-3 sm:gap-4">
+          <span className="bg-[#2de0a7] text-[#071a1b] text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded font-mono whitespace-nowrap flex-shrink-0">LIVE</span>
+          <div className="flex gap-6 sm:gap-10 overflow-x-auto scrollbar-hide">
             {[
-              "New Batch Starting Feb 1 — 40 Seats Left",
-              "Hiring Partners now include 12 new unicorn startups",
-              "Free Python Bootcamp every Saturday 10AM IST",
-              "Placement Record: 3 offers in 8 days — Sneha K., Bootcamp 2024",
+              "🚀 New Batch Starting Feb 1 — 40 Seats Left",
+              "🤝 12 new unicorn startups joined as hiring partners",
+              "🎓 Free Python Bootcamp every Saturday 10AM IST",
+              "🏆 Placement Record: 3 offers in 8 days",
             ].map((t, i) => (
-              <span
-                key={i}
-                className="text-[13px] text-[rgba(255,255,255,0.75)] whitespace-nowrap"
-              >
-                <FaBell
-                  size={11}
-                  className="mr-[5px] align-middle opacity-60"
-                />
-                {t}
-              </span>
+              <span key={i} className="text-[12px] sm:text-[13px] text-white/70 whitespace-nowrap">{t}</span>
             ))}
           </div>
-
         </div>
       </div>
 
-      <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
+      {/* MAIN CONTENT */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* COURSES */}
-        <section className="py-[72px] pb-[48px]">
-          <div className="text-center mb-12">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-[10px] font-['Space_Mono',monospace]">
-              Our Programs
-            </p>
-
-            <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.5rem)] text-[#111] mb-[14px] tracking-[-0.04em]">
-              Data Science Courses
-            </h2>
-
-            <p className="text-[#777] text-[15px] max-w-[520px] mx-auto leading-[1.65]">
+        <section className="py-14 sm:py-16 lg:py-20">
+          <div className="text-center mb-10 sm:mb-12">
+            <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-2.5 font-mono">Our Programs</p>
+            <h2 className="font-mono text-[clamp(1.6rem,3vw,2.4rem)] text-gray-900 mb-3.5 tracking-tight">Data Science Courses</h2>
+            <p className="text-gray-500 text-[14px] sm:text-[15px] max-w-[480px] mx-auto leading-relaxed">
               From your first line of Python to deploying LLMs in production — choose the track that matches where you are.
             </p>
           </div>
 
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(265px,1fr))] gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
             {COURSES.map((c, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[18px] overflow-hidden border border-[#e4e5ea] transition-transform duration-200 cursor-pointer"
-              >
-                <div
-                  className="px-6 pt-6 pb-5"
-                  style={{ background: c.color }}
-                >
-                  <span className="bg-[rgba(255,255,255,0.18)] text-white text-[11px] font-bold px-[10px] py-[4px] rounded-[20px] inline-block mb-3">
+              <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:-translate-y-1 transition-transform duration-200 cursor-pointer shadow-sm hover:shadow-lg">
+                {/* Card Header */}
+                <div className="px-5 pt-5 pb-4" style={{ background: c.color }}>
+                  <span className="bg-white/20 text-white text-[11px] font-bold px-2.5 py-1 rounded-full inline-block mb-3">
                     {c.tag}
                   </span>
-
-                  <h3 className="font-['Space_Mono',monospace] text-[15px] font-bold text-white leading-[1.4] tracking-[-0.02em]">
-                    {c.title}
-                  </h3>
-
-                  <div className="flex gap-4 mt-[14px]">
-                    <span className="text-[12px] text-[rgba(255,255,255,0.65)]">
-                      ⏱ {c.duration}
-                    </span>
-                    <span className="text-[12px] text-[rgba(255,255,255,0.65)]">
-                      📡 {c.mode}
-                    </span>
+                  <h3 className="font-mono text-[14px] sm:text-[15px] font-bold text-white leading-snug tracking-tight">{c.title}</h3>
+                  <div className="flex flex-wrap gap-3 mt-3">
+                    <span className="text-[11px] sm:text-[12px] text-white/65">⏱ {c.duration}</span>
+                    <span className="text-[11px] sm:text-[12px] text-white/65">📡 {c.mode}</span>
                   </div>
                 </div>
 
-                <div className="px-6 pt-5 pb-6">
-                  <ul className="list-none mb-5 p-0">
-                    {c.features.map((f) => (
-                      <li
-                        key={f}
-                        className="flex items-center gap-2 text-[13px] text-[#444] mb-2"
-                      >
-                        <FaCheckCircle size={13} color={c.color} /> {f}
+                {/* Card Body */}
+                <div className="px-5 pt-4 pb-5">
+                  <ul className="mb-4 space-y-1.5">
+                    {c.features.map(f => (
+                      <li key={f} className="flex items-center gap-2 text-[13px] text-gray-600">
+                        <span style={{ color: c.color }}>✓</span> {f}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex items-end justify-between">
-                    {/* <div>
-                      <div
-                        className="text-[22px] font-bold font-['Space_Mono',monospace]"
-                        style={{ color: c.color }}
-                      >
-                        {c.price}
-                      </div>
-
-                      <div className="text-[12px] text-[#bbb] line-through">
-                        {c.original}
-                      </div>
-
-                      <div className="text-[11px] text-[#999]">
-                        {c.students} enrolled
-                      </div>
-                    </div> */}
-
-                    <button
-                      className="text-white px-[18px] py-[10px] rounded-[10px] text-[13px] font-semibold border-none cursor-pointer"
-                      style={{ background: c.color }}
-                    >
-                      Enroll Now
+                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+                   
+                    <button className="text-white px-4 py-2 rounded-lg text-[13px] font-semibold border-none cursor-pointer" style={{ background: c.color }}>
+                      Enroll →
                     </button>
                   </div>
                 </div>
@@ -298,161 +234,98 @@ export default function DataSciencePage() {
         </section>
 
         {/* FREE RESOURCES */}
-        <section className="py-12">
-          <div className="bg-[linear-gradient(135deg,#071a1b,#0f2a2b)] rounded-[24px] px-[40px] py-[48px] border border-[rgba(45,224,167,0.15)] relative overflow-hidden">
+        <section className="pb-14 sm:pb-16">
+          <div className="bg-[#071a1b] rounded-2xl sm:rounded-3xl px-6 sm:px-10 py-10 sm:py-12 border border-[#2de0a7]/15 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 rounded-full bg-[#0f7275]/15 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-[#6a3de8]/10 blur-2xl pointer-events-none" />
 
-            {/* Decorative Circle */}
-            <div className="absolute -top-[40px] -right-[40px] w-[250px] h-[250px] rounded-full bg-[rgba(15,114,117,0.15)]" />
-
-            <div className="grid grid-cols-2 gap-12 items-center relative">
-
-              {/* Text Content */}
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
+              {/* Text */}
               <div>
-                <p className="text-[12px] font-bold tracking-[0.12em] text-[#2de0a7] uppercase mb-[10px] font-['Space_Mono',monospace]">
-                  100% Free
-                </p>
-
-                <h2 className="font-['Space_Mono',monospace] text-[clamp(1.6rem,2.5vw,2rem)] text-white mb-[14px] tracking-[-0.03em]">
+                <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#2de0a7] uppercase mb-2.5 font-mono">100% Free</p>
+                <h2 className="font-mono text-[clamp(1.5rem,2.5vw,2rem)] text-white mb-3.5 tracking-tight">
                   Free Resources to Get Started
                 </h2>
-
-                <p className="text-[rgba(255,255,255,0.6)] text-[15px] leading-[1.75]">
+                <p className="text-white/55 text-[14px] sm:text-[15px] leading-relaxed max-w-sm">
                   No signup needed. Explore our free tools to gauge where you stand — then decide if a full program is right for you.
                 </p>
               </div>
 
               {/* Resource Cards */}
-              <div className="grid grid-cols-2 gap-[14px]">
+              <div className="grid grid-cols-2 gap-3 sm:gap-3.5">
                 {RESOURCES.map((r, i) => (
-                  <div
-                    key={i}
-                    className="bg-[rgba(255,255,255,0.06)] rounded-[16px] px-[16px] py-[18px] border border-[rgba(255,255,255,0.1)] flex flex-col gap-[10px] cursor-pointer
-                       hover:translate-y-[-3px] hover:shadow-lg transition-all duration-300"
-                  >
-                    {/* Icon */}
-                    <div
-                      className="w-[42px] h-[42px] rounded-[10px] flex items-center justify-center"
-                      style={{ background: r.color + "25" }}
-                    >
-                      <r.icon size={18} color={r.color} />
+                  <div key={i} className="bg-white/6 rounded-2xl px-4 py-4 sm:py-5 border border-white/10 flex flex-col gap-2.5 cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg" style={{ background: r.color + "25" }}>
+                      {r.icon}
                     </div>
-
-                    {/* Label and Description */}
                     <div>
-                      <div className="text-[13px] font-semibold text-white mb-[3px]">
-                        {r.label}
-                      </div>
-                      <div className="text-[12px] text-[rgba(255,255,255,0.5)]">
-                        {r.desc}
-                      </div>
+                      <div className="text-[13px] font-semibold text-white mb-0.5">{r.label}</div>
+                      <div className="text-[11px] sm:text-[12px] text-white/50">{r.desc}</div>
                     </div>
-
-                    {/* Action */}
-                    <div
-                      className="flex items-center gap-1 text-[12px] font-semibold mt-[2px]"
-                      style={{ color: r.color }}
-                    >
-                      Access Free <FaArrowRight size={11} />
+                    <div className="flex items-center gap-1 text-[12px] font-semibold mt-0.5" style={{ color: r.color }}>
+                      Access Free →
                     </div>
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* CURRICULUM / EXAM INFO equivalent */}
-        <section className="py-12">
-          {/* Header */}
+        {/* CURRICULUM */}
+        <section className="pb-14 sm:pb-16">
           <div className="text-center mb-10">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-[10px] font-['Space_Mono',monospace]">
-              What You'll Learn
-            </p>
-            <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.4rem)] text-[#111] tracking-[-0.04em]">
-              Curriculum Overview
-            </h2>
+            <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-2.5 font-mono">What You'll Learn</p>
+            <h2 className="font-mono text-[clamp(1.6rem,3vw,2.4rem)] text-gray-900 tracking-tight">Curriculum Overview</h2>
           </div>
 
-          {/* Tabs Container */}
-          <div className="bg-white rounded-[20px] border border-[#e4e5ea] overflow-hidden">
-
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
             {/* Tabs */}
-            <div className="flex border-b border-[#e4e5ea]">
-              {CURR_TABS.map((t) => (
+            <div className="flex border-b border-gray-200">
+              {CURR_TABS.map(t => (
                 <button
                   key={t}
-                  onClick={() => setActiveTab(t as CurrTab)}
-                  className={`flex-1 px-4 py-4 text-[14px] font-semibold cursor-pointer border-none
-                      ${activeTab === t ? "bg-[#0f7275] text-white font-['Space_Mono',monospace]" : "bg-white text-[#555]"}`}
+                  onClick={() => setActiveTab(t)}
+                  className={`flex-1 px-3 sm:px-4 py-3.5 text-[13px] sm:text-[14px] font-semibold cursor-pointer border-none transition-colors
+                    ${activeTab === t ? "bg-[#0f7275] text-white font-mono" : "bg-white text-gray-500 hover:bg-gray-50"}`}
                 >
                   {t}
                 </button>
               ))}
             </div>
 
-            {/* Curriculum Grid */}
-            <div className="grid grid-cols-2 gap-0">
-              {CURRICULUM_DATA[activeTab].map((row, i) => (
-                <div
-                  key={i}
-                  className={`flex gap-3 px-7 py-4 border-b border-[#f0f1f5] ${i % 2 === 0 ? "border-r border-[#f0f1f5]" : ""}`}
-                >
-                  <FaCode size={15} color="#0f7275" className="mt-[2px] flex-shrink-0" />
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {CURRICULUM_DATA[activeTab].map((row :string, i:number) => (
+                <div key={i} className={`flex gap-3 px-5 sm:px-7 py-4 border-b border-gray-100 ${i % 2 === 0 ? "sm:border-r border-gray-100" : ""}`}>
+                  <span className="text-[#0f7275] mt-0.5 flex-shrink-0 text-sm">⚡</span>
                   <div>
-                    <div className="text-[11px] font-bold text-[#aaa] uppercase tracking-[0.08em] mb-[3px]">
-                      {row.label}
-                    </div>
-                    <div className="text-[14px] font-medium text-[#111]">
-                      {row.value}
-                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">{row.label}</div>
+                    <div className="text-[13px] sm:text-[14px] font-medium text-gray-800">{row.value}</div>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </section>
 
         {/* MENTORS */}
-        <section className="py-12">
-          {/* Header */}
+        <section className="pb-14 sm:pb-16">
           <div className="text-center mb-10">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-[10px] font-['Space_Mono',monospace]">
-              Learn From The Best
-            </p>
-            <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.4rem)] text-[#111] tracking-[-0.04em]">
-              Expert Mentors & Instructors
-            </h2>
+            <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-2.5 font-mono">Learn From The Best</p>
+            <h2 className="font-mono text-[clamp(1.6rem,3vw,2.4rem)] text-gray-900 tracking-tight">Expert Mentors & Instructors</h2>
           </div>
 
-          {/* Mentor Grid */}
-          {/* <div className="grid grid-cols-4 gap-5">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {MENTORS.map((m, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[18px] px-5 py-7 text-center border border-[#e4e5ea]"
-              >
-               
-                <div
-                  className="w-[72px] h-[72px] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-[22px] font-bold font-['Space_Mono',monospace]"
-                  style={{ background: m.color }}
-                >
+              <div key={i} className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center font-bold text-white text-lg sm:text-xl mx-auto mb-4" style={{ background: m.color }}>
                   {m.initials}
                 </div>
-
-               
-                <h4 className="font-bold text-[15px] text-[#111] mb-1">{m.name}</h4>
-                <p className="text-[12px] font-semibold mb-1" style={{ color: m.color }}>
-                  {m.role}
-                </p>
-                <p className="text-[12px] text-[#888] leading-[1.5]">{m.specialty}</p>
-
-                
-                <div className="mt-3 flex justify-center gap-[2px]">
-                  {[...Array(5)].map((_, s) => (
-                    <FaStar key={s} size={12} fill="#f5a623" color="#f5a623" />
-                  ))}
+                <div className="font-bold text-[14px] sm:text-[15px] text-gray-900 mb-1">{m.name}</div>
+                <div className="text-[12px] text-gray-500 mb-3 leading-snug">{m.role}</div>
+                <div className="inline-block text-[11px] sm:text-[12px] font-semibold px-3 py-1 rounded-full" style={{ background: m.color + "15", color: m.color }}>
+                  {m.specialty}
                 </div>
               </div>
             ))}
@@ -460,49 +333,26 @@ export default function DataSciencePage() {
         </section>
 
         {/* TOPPERS / RESULTS */}
-        <section className="py-12">
-          {/* Header */}
+        <section className="pb-14 sm:pb-16">
           <div className="text-center mb-10">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-[10px] font-['Space_Mono',monospace]">
-              Success Stories
-            </p>
-            <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.4rem)] text-[#111] tracking-[-0.04em]">
-              Our Alumni Are Thriving
-            </h2>
+            <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-2.5 font-mono">Success Stories</p>
+            <h2 className="font-mono text-[clamp(1.6rem,3vw,2.4rem)] text-gray-900 tracking-tight">Our Alumni Are Thriving</h2>
           </div>
 
-          {/* Alumni Grid */}
-          {/* <div className="grid grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {TOPPERS.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[18px] p-7 border border-[#e4e5ea]"
-              >
-               
-                <div className="text-[38px] text-[#0f7275] leading-[1] mb-3 font-['Space_Mono',monospace]">
-                  &quot;
-                </div>
-
-                
-                <p className="text-[14px] text-[#555] leading-[1.75] mb-5">
-                  {t.quote}
-                </p>
-
-              
-                <div className="flex items-center gap-3 pt-4 border-t border-[#f0f1f5]">
-
-                  <div className="w-[44px] h-[44px] rounded-full bg-[#0f7275] text-white flex items-center justify-center font-bold text-[16px]">
+              <div key={i} className="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200 shadow-sm">
+                <div className="text-4xl text-[#0f7275] leading-none mb-4 font-mono">"</div>
+                <p className="text-[13px] sm:text-[14px] text-gray-600 leading-relaxed mb-5">{t.quote}</p>
+                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                  <div className="w-10 h-10 rounded-full bg-[#0f7275] text-white flex items-center justify-center font-bold text-[15px] flex-shrink-0">
                     {t.name[0]}
                   </div>
-
-             
-                  <div>
-                    <div className="font-bold text-[14px] text-[#111]">{t.name}</div>
-                    <div className="text-[12px] text-[#888]">{t.role}</div>
+                  <div className="min-w-0">
+                    <div className="font-bold text-[13px] sm:text-[14px] text-gray-900 truncate">{t.name}</div>
+                    <div className="text-[11px] sm:text-[12px] text-gray-500 truncate">{t.role}</div>
                   </div>
-
-            
-                  <span className="ml-auto bg-[#e8f5f5] text-[#0f7275] text-[10px] font-bold px-2 py-[3px] rounded-[20px]">
+                  <span className="ml-auto flex-shrink-0 bg-[#e8f5f5] text-[#0f7275] text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap">
                     {t.batch}
                   </span>
                 </div>
@@ -512,92 +362,69 @@ export default function DataSciencePage() {
         </section>
 
         {/* FAQs */}
-       <section className="py-12 pb-18">
-  {/* Header */}
-  <div className="text-center mb-10">
-    <p className="text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-[10px] font-['Space_Mono',monospace]">
-      Got Questions?
-    </p>
-    <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.4rem)] text-[#111] tracking-[-0.04em]">
-      Frequently Asked Questions
-    </h2>
-  </div>
-
-  {/* FAQ Items Container */}
-  <div className="max-w-[780px] mx-auto">
-    {FAQS.map((f, i) => (
-      <div
-        key={i}
-        onClick={() => setOpenFaq(openFaq === i ? null : i)}
-        className="bg-white rounded-[14px] mb-2.5 border border-[#e4e5ea] overflow-hidden cursor-pointer"
-      >
-        {/* Question Header */}
-        <div className="flex items-center justify-between px-6 py-4">
-          <span className="text-[14px] font-semibold text-[#111] pr-5">{f.q}</span>
-          <FaChevronDown
-            size={16}
-            color="#888"
-            className={`flex-shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
-          />
-        </div>
-
-        {/* Answer */}
-        {openFaq === i && (
-          <div className="px-6 pt-4 pb-5 text-[14px] text-[#666] leading-[1.75] border-t border-[#f0f1f5]">
-            {f.a}
+        <section className="pb-16 sm:pb-20">
+          <div className="text-center mb-10">
+            <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.12em] text-[#0f7275] uppercase mb-2.5 font-mono">Got Questions?</p>
+            <h2 className="font-mono text-[clamp(1.6rem,3vw,2.4rem)] text-gray-900 tracking-tight">Frequently Asked Questions</h2>
           </div>
-        )}
-      </div>
-    ))}
-  </div>
-</section>
+
+          <div className="max-w-[740px] mx-auto space-y-2.5">
+            {FAQS.map((f, i) => (
+              <div
+                key={i}
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center justify-between px-5 sm:px-6 py-4">
+                  <span className="text-[13px] sm:text-[14px] font-semibold text-gray-900 pr-4 leading-snug">{f.q}</span>
+                  <span className={`flex-shrink-0 text-gray-400 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}>▾</span>
+                </div>
+                {openFaq === i && (
+                  <div className="px-5 sm:px-6 pt-1 pb-5 text-[13px] sm:text-[14px] text-gray-600 leading-relaxed border-t border-gray-100">
+                    {f.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
 
       {/* FOOTER CTA */}
-     <div className="relative bg-[linear-gradient(135deg,#071a1b,#0f2a2b)] px-6 py-15 text-center overflow-hidden">
-  {/* Background grid overlay */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      backgroundImage:
-        "linear-gradient(rgba(45,224,167,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,224,167,0.04) 1px, transparent 1px)",
-      backgroundSize: "40px 40px",
-    }}
-  />
+      <footer className="relative bg-[#071a1b] px-4 sm:px-6 py-16 sm:py-20 text-center overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{backgroundImage:"linear-gradient(rgba(45,224,167,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(45,224,167,0.04) 1px,transparent 1px)",backgroundSize:"40px 40px"}} />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#0f7275]/15 rounded-full blur-3xl pointer-events-none" />
 
-  {/* Content */}
- <div className="relative bg-[linear-gradient(135deg,#071a1b,#0f2a2b)] px-6 py-15 text-center overflow-hidden">
-  {/* Background grid overlay */}
-  <div
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      backgroundImage:
-        "linear-gradient(rgba(45,224,167,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,224,167,0.04) 1px, transparent 1px)",
-      backgroundSize: "40px 40px",
-    }}
-  />
+        <div className="relative">
+          <h2 className="font-mono text-[clamp(1.8rem,4vw,2.6rem)] text-white mb-3 tracking-tight">
+            Your Data Career Starts <em className="text-[#2de0a7] not-italic">Now</em>
+          </h2>
+          <p className="text-[14px] sm:text-[15px] text-white/50 mb-8">
+            Join 12,000+ data professionals who launched their careers with us.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <button className="bg-[#2de0a7] text-[#071a1b] px-7 sm:px-8 py-3 rounded-xl text-[14px] sm:text-[15px] font-bold hover:bg-[#22c992] transition-colors">
+              Start Free Trial
+            </button>
+            <button className="bg-white/7 text-white px-7 sm:px-8 py-3 rounded-xl text-[14px] sm:text-[15px] font-semibold border border-white/20 hover:bg-white/10 transition-colors">
+              Download Syllabus
+            </button>
+          </div>
 
-  {/* Content */}
-  <div className="relative py-12">
-    <h2 className="font-['Space_Mono',monospace] text-[clamp(1.8rem,3vw,2.5rem)] text-white mb-3 tracking-[-0.04em]">
-      Your Data Career Starts <span className="text-[#2de0a7] italic">Now</span>
-    </h2>
-    <p className="text-[15px] text-[rgba(255,255,255,0.55)] mb-8">
-      Join 12,000+ data professionals who launched their careers with us.
-    </p>
-
-    {/* Buttons */}
-    <div className="flex flex-wrap justify-center gap-4">
-      <button className="bg-[#2de0a7] text-[#071a1b] px-8 py-3 rounded-[10px] text-[15px] font-bold border-none cursor-pointer">
-        Start Free Trial
-      </button>
-      <button className="bg-[rgba(255,255,255,0.07)] text-white px-8 py-3 rounded-[10px] text-[15px] font-semibold border border-[rgba(255,255,255,0.2)] cursor-pointer">
-        Download Syllabus
-      </button>
-    </div>
-  </div>
-</div>
-</div>
+          <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded-md bg-[#2de0a7] flex items-center justify-center text-[#071a1b] font-black text-xs">D</div>
+              <span className="font-black text-white text-sm">DataPro</span>
+            </div>
+            <p className="text-[12px] text-white/30">© 2026 DataPro. All rights reserved.</p>
+            <div className="flex gap-5">
+              {["Privacy", "Terms", "Contact"].map(l => (
+                <a key={l} href="#" className="text-[12px] text-white/40 hover:text-white transition-colors">{l}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
