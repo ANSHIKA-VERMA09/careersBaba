@@ -39,10 +39,10 @@ const SLIDES = [
 ];
 
 const STATS = [
-  { value: "50,000+", label: "Students Enrolled" },
-  { value: "92%", label: "Selection Rate" },
-  { value: "340+", label: "Partner Colleges" },
-  { value: "4.9★", label: "Google Rating" },
+  { value: "2026", label: "Founded Year" },
+  { value: "10+", label: "Courses Available" },
+  { value: "Live", label: "Project Based Learning" },
+  { value: "24/7", label: "Student Support" },
 ];
 
 export default function Crausel() {
@@ -108,9 +108,7 @@ export default function Crausel() {
 
   return (
     <section
-      className="  relative 
-    h-[50vh] 
-    md:h-[50vh] 
+      className=" relative  h-[50vh]  md:h-[50vh] 
     lg:h-[70vh] 
     flex items-center 
     overflow-hidden 
