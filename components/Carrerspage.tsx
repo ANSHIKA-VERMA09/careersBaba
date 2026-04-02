@@ -26,7 +26,7 @@ const roles = [
 
 export default function CareersPage() {
   return (
-    <section className="bg-[#faf7f2] text-[#0f0e0d] font-sans">
+    <section className="bg-[#faf7f2]  text-[#0f0e0d] font-sans">
       <div className="max-w-6xl mx-auto">
 
         {/* ── HERO ── */}

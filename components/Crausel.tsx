@@ -114,7 +114,7 @@ export default function Crausel() {
     lg:h-[70vh] 
     flex items-center 
     overflow-hidden 
-    pt-16 "
+    pt-24 "
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
