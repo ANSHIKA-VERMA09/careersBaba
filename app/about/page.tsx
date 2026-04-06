@@ -71,8 +71,8 @@ export default function AboutPage() {
           </span>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark mt-3 mb-6">
-            A Community of Achievers
-          </h2>
+            Faculty
+          </h2> 
 
           <p className="text-dark leading-relaxed mb-4 text-sm sm:text-base md:text-xl">
             Ankur Sir is the founder and mentor behind Careers Baba. He holds a B.Tech degree from MNNIT Allahabad and has also appeared for the Civil Services Interview. With a strong command over Polity and General Studies, he is known as a dedicated mentor who guides students with clarity, strategy, and confidence
