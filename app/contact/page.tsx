@@ -1,5 +1,5 @@
 'use client'
-
+import emailjs from "@emailjs/browser";
 import { useState, ChangeEvent, FormEvent } from 'react'
 import { MdEmail, MdLocationOn, MdSend } from 'react-icons/md'
 import { FaPhone, FaWhatsapp, FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
@@ -12,7 +12,7 @@ type FormData = {
     subject: string
     message: string
 }
-
+  
 export default function ContactPage() {
     const [form, setForm] = useState<FormData>({
         name: '',
@@ -31,14 +31,27 @@ export default function ContactPage() {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        setLoading(true)
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
 
-        await new Promise((r) => setTimeout(r, 1200))
+    try {
+        await emailjs.send(
+           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+            {
+                name: form.name,
+                email: form.email,
+                phone: form.phone,
+                subject: form.subject,
+                message: form.message,
+            },
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!   
+        )
+
 
         setSent(true)
-        setLoading(false)
+
         setForm({
             name: '',
             email: '',
@@ -46,7 +59,14 @@ export default function ContactPage() {
             subject: '',
             message: '',
         })
+    console.log("Message sent successfully")
+    } catch (error) {
+        console.error(error)
+        alert("❌ Failed to send message")
     }
+
+    setLoading(false)
+}
 
     const contactCards = [
         {
@@ -75,14 +95,7 @@ export default function ContactPage() {
         },
     ]
 
-    //   const socials = [
-    //     { icon: <FaFacebookF />, href: 'https://www.facebook.com/yourpage', label: 'Facebook' },
-    //     { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/yourprofile', label: 'LinkedIn' },
-    //     { icon: <FaTwitter />, href: 'https://twitter.com/yourhandle', label: 'Twitter' },
-    //     { icon: <FaInstagram />, href: 'https://www.instagram.com/careersbaba', label: 'Instagram' },
-    //     { icon: <FaYoutube />, href: 'https://youtube.com/@careersbaba', label: 'YouTube' },
-    //     { icon: <FaWhatsapp />, href: 'https://whatsapp.com/channel/0029VbBqzrF1CYoKQLmBFn3g', label: 'WhatsApp' },
-    //   ]
+
 
     return (
         <div className="min-h-screen ">
@@ -102,32 +115,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Contact cards */}
-            {/* <section className="py-10">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {contactCards.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target={item.href.startsWith('http') ? '_blank' : undefined}
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-amber-400/30 hover:bg-white/10"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-400/10 text-amber-400">
-                {item.icon}
-              </div>
-              <div>
-                <p className=" font-medium uppercase tracking-wide text-slate-400">
-                  {item.label}
-                </p>
-                <p className="mt-1 text-xl font-medium text-black">
-                  {item.value}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section> */}
+          
 
             {/* Form + info */}
             <section className="pb-14">
@@ -304,7 +292,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Footer */}
+           
 
         </div>
     )
