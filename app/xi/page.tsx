@@ -10,7 +10,7 @@ import {
   FaDna, FaMicroscope, FaInfinity, FaRocket
 } from "react-icons/fa";
 import type { IconType } from "react-icons";
-import Class11Dashboard from "@/components/ClassX|Dashboard";
+import Class11Dashboard from "@/components/ClassX-Dashboard";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
