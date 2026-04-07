@@ -1,6 +1,7 @@
 import AiChat from '@/components/AIchatbot';
 import Crausel from '@/components/Crausel';
 import ListAllCourse from '@/components/ListAllCourse';
+import Modal from '@/components/Modal';
 import Testimonials from '@/components/Testimonials';
 import TextMarquee from '@/components/TextMarquee';
 import Video from '@/components/Video';
@@ -94,7 +95,8 @@ export default function Home() {
       <Crausel/>
       <TextMarquee/>
       <ListAllCourse/>
-      <AiChat/>
+      {/* <AiChat/> */}
+      <Modal/>
       
 
       {/* Why Us */}
