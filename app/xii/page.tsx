@@ -127,52 +127,52 @@ const SUBJECT_TABS: SubjectTab[] = ["Mathematics", "Physics", "Chemistry", "Biol
 
 const CHAPTERS: Record<SubjectTab, ChapterRow[]> = {
   "Mathematics": [
-    { no: 1,  title: "Relations and Functions",                subject: "Maths",    color: "#1a237e", lessons: 7,  quiz: true, notes: true, free: true  },
-    { no: 2,  title: "Inverse Trigonometric Functions",        subject: "Maths",    color: "#1a237e", lessons: 6,  quiz: true, notes: true, free: true  },
-    { no: 3,  title: "Matrices",                               subject: "Algebra",  color: "#1a237e", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 4,  title: "Determinants",                           subject: "Algebra",  color: "#1a237e", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 5,  title: "Continuity and Differentiability",       subject: "Calculus", color: "#1a237e", lessons: 10, quiz: true, notes: true, free: false },
-    { no: 6,  title: "Application of Derivatives",            subject: "Calculus", color: "#1a237e", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 7,  title: "Integrals",                              subject: "Calculus", color: "#1a237e", lessons: 12, quiz: true, notes: true, free: false },
-    { no: 8,  title: "Application of Integrals",              subject: "Calculus", color: "#1a237e", lessons: 6,  quiz: true, notes: true, free: false },
+    { no: 1, title: "Relations and Functions", subject: "Maths", color: "#1a237e", lessons: 7, quiz: true, notes: true, free: true },
+    { no: 2, title: "Inverse Trigonometric Functions", subject: "Maths", color: "#1a237e", lessons: 6, quiz: true, notes: true, free: true },
+    { no: 3, title: "Matrices", subject: "Algebra", color: "#1a237e", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 4, title: "Determinants", subject: "Algebra", color: "#1a237e", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 5, title: "Continuity and Differentiability", subject: "Calculus", color: "#1a237e", lessons: 10, quiz: true, notes: true, free: false },
+    { no: 6, title: "Application of Derivatives", subject: "Calculus", color: "#1a237e", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 7, title: "Integrals", subject: "Calculus", color: "#1a237e", lessons: 12, quiz: true, notes: true, free: false },
+    { no: 8, title: "Application of Integrals", subject: "Calculus", color: "#1a237e", lessons: 6, quiz: true, notes: true, free: false },
   ],
   "Physics": [
-    { no: 1,  title: "Electric Charges and Fields",            subject: "Electro",  color: "#4a148c", lessons: 8,  quiz: true, notes: true, free: true  },
-    { no: 2,  title: "Electrostatic Potential and Capacitance",subject: "Electro",  color: "#4a148c", lessons: 9,  quiz: true, notes: true, free: true  },
-    { no: 3,  title: "Current Electricity",                    subject: "Circuits", color: "#4a148c", lessons: 10, quiz: true, notes: true, free: false },
-    { no: 4,  title: "Moving Charges and Magnetism",           subject: "Magnetics",color: "#4a148c", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 5,  title: "Magnetism and Matter",                   subject: "Magnetics",color: "#4a148c", lessons: 7,  quiz: true, notes: true, free: false },
-    { no: 6,  title: "Electromagnetic Induction",              subject: "EMI",      color: "#4a148c", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 7,  title: "Ray Optics and Optical Instruments",     subject: "Optics",   color: "#4a148c", lessons: 10, quiz: true, notes: true, free: false },
-    { no: 8,  title: "Wave Optics",                            subject: "Optics",   color: "#4a148c", lessons: 8,  quiz: true, notes: true, free: false },
+    { no: 1, title: "Electric Charges and Fields", subject: "Electro", color: "#4a148c", lessons: 8, quiz: true, notes: true, free: true },
+    { no: 2, title: "Electrostatic Potential and Capacitance", subject: "Electro", color: "#4a148c", lessons: 9, quiz: true, notes: true, free: true },
+    { no: 3, title: "Current Electricity", subject: "Circuits", color: "#4a148c", lessons: 10, quiz: true, notes: true, free: false },
+    { no: 4, title: "Moving Charges and Magnetism", subject: "Magnetics", color: "#4a148c", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 5, title: "Magnetism and Matter", subject: "Magnetics", color: "#4a148c", lessons: 7, quiz: true, notes: true, free: false },
+    { no: 6, title: "Electromagnetic Induction", subject: "EMI", color: "#4a148c", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 7, title: "Ray Optics and Optical Instruments", subject: "Optics", color: "#4a148c", lessons: 10, quiz: true, notes: true, free: false },
+    { no: 8, title: "Wave Optics", subject: "Optics", color: "#4a148c", lessons: 8, quiz: true, notes: true, free: false },
   ],
   "Chemistry": [
-    { no: 1,  title: "The Solid State",                        subject: "Physical", color: "#880e4f", lessons: 7,  quiz: true, notes: true, free: true  },
-    { no: 2,  title: "Solutions",                              subject: "Physical", color: "#880e4f", lessons: 8,  quiz: true, notes: true, free: true  },
-    { no: 3,  title: "Electrochemistry",                       subject: "Physical", color: "#880e4f", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 4,  title: "Chemical Kinetics",                      subject: "Physical", color: "#880e4f", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 5,  title: "Surface Chemistry",                      subject: "Physical", color: "#880e4f", lessons: 6,  quiz: true, notes: true, free: false },
-    { no: 6,  title: "The p-Block Elements",                   subject: "Inorganic",color: "#880e4f", lessons: 10, quiz: true, notes: true, free: false },
-    { no: 7,  title: "Coordination Compounds",                 subject: "Inorganic",color: "#880e4f", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 8,  title: "Aldehydes, Ketones and Carboxylic Acids",subject: "Organic",  color: "#880e4f", lessons: 11, quiz: true, notes: true, free: false },
+    { no: 1, title: "The Solid State", subject: "Physical", color: "#880e4f", lessons: 7, quiz: true, notes: true, free: true },
+    { no: 2, title: "Solutions", subject: "Physical", color: "#880e4f", lessons: 8, quiz: true, notes: true, free: true },
+    { no: 3, title: "Electrochemistry", subject: "Physical", color: "#880e4f", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 4, title: "Chemical Kinetics", subject: "Physical", color: "#880e4f", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 5, title: "Surface Chemistry", subject: "Physical", color: "#880e4f", lessons: 6, quiz: true, notes: true, free: false },
+    { no: 6, title: "The p-Block Elements", subject: "Inorganic", color: "#880e4f", lessons: 10, quiz: true, notes: true, free: false },
+    { no: 7, title: "Coordination Compounds", subject: "Inorganic", color: "#880e4f", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 8, title: "Aldehydes, Ketones and Carboxylic Acids", subject: "Organic", color: "#880e4f", lessons: 11, quiz: true, notes: true, free: false },
   ],
   "Biology": [
-    { no: 1,  title: "Sexual Reproduction in Flowering Plants",subject: "Botany",   color: "#1b5e20", lessons: 7,  quiz: true, notes: true, free: true  },
-    { no: 2,  title: "Human Reproduction",                     subject: "Zoology",  color: "#1b5e20", lessons: 8,  quiz: true, notes: true, free: true  },
-    { no: 3,  title: "Principles of Inheritance and Variation",subject: "Genetics", color: "#1b5e20", lessons: 10, quiz: true, notes: true, free: false },
-    { no: 4,  title: "Molecular Basis of Inheritance",         subject: "Genetics", color: "#1b5e20", lessons: 9,  quiz: true, notes: true, free: false },
-    { no: 5,  title: "Human Health and Disease",               subject: "Physiology",color: "#1b5e20", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 6,  title: "Biotechnology — Principles and Processes",subject: "Biotech", color: "#1b5e20", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 7,  title: "Biotechnology and its Applications",    subject: "Biotech",  color: "#1b5e20", lessons: 7,  quiz: true, notes: true, free: false },
-    { no: 8,  title: "Ecosystem",                              subject: "Ecology",  color: "#1b5e20", lessons: 8,  quiz: true, notes: true, free: false },
+    { no: 1, title: "Sexual Reproduction in Flowering Plants", subject: "Botany", color: "#1b5e20", lessons: 7, quiz: true, notes: true, free: true },
+    { no: 2, title: "Human Reproduction", subject: "Zoology", color: "#1b5e20", lessons: 8, quiz: true, notes: true, free: true },
+    { no: 3, title: "Principles of Inheritance and Variation", subject: "Genetics", color: "#1b5e20", lessons: 10, quiz: true, notes: true, free: false },
+    { no: 4, title: "Molecular Basis of Inheritance", subject: "Genetics", color: "#1b5e20", lessons: 9, quiz: true, notes: true, free: false },
+    { no: 5, title: "Human Health and Disease", subject: "Physiology", color: "#1b5e20", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 6, title: "Biotechnology — Principles and Processes", subject: "Biotech", color: "#1b5e20", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 7, title: "Biotechnology and its Applications", subject: "Biotech", color: "#1b5e20", lessons: 7, quiz: true, notes: true, free: false },
+    { no: 8, title: "Ecosystem", subject: "Ecology", color: "#1b5e20", lessons: 8, quiz: true, notes: true, free: false },
   ],
   "English": [
-    { no: 1,  title: "The Last Lesson (Flamingo)",             subject: "Prose",    color: "#bf360c", lessons: 4,  quiz: true, notes: true, free: true  },
-    { no: 2,  title: "My Mother at Sixty-Six (Poetry)",        subject: "Poetry",   color: "#bf360c", lessons: 3,  quiz: true, notes: true, free: true  },
-    { no: 3,  title: "The Tiger King (Vistas)",                subject: "Prose",    color: "#bf360c", lessons: 3,  quiz: true, notes: true, free: false },
-    { no: 4,  title: "Grammar — Determiners, Clauses & Tenses",subject: "Grammar",  color: "#bf360c", lessons: 8,  quiz: true, notes: true, free: false },
-    { no: 5,  title: "Writing — Report, Notice & Speech",      subject: "Writing",  color: "#bf360c", lessons: 6,  quiz: true, notes: true, free: false },
-    { no: 6,  title: "Unseen Passage & Comprehension",         subject: "Reading",  color: "#bf360c", lessons: 6,  quiz: true, notes: true, free: false },
+    { no: 1, title: "The Last Lesson (Flamingo)", subject: "Prose", color: "#bf360c", lessons: 4, quiz: true, notes: true, free: true },
+    { no: 2, title: "My Mother at Sixty-Six (Poetry)", subject: "Poetry", color: "#bf360c", lessons: 3, quiz: true, notes: true, free: true },
+    { no: 3, title: "The Tiger King (Vistas)", subject: "Prose", color: "#bf360c", lessons: 3, quiz: true, notes: true, free: false },
+    { no: 4, title: "Grammar — Determiners, Clauses & Tenses", subject: "Grammar", color: "#bf360c", lessons: 8, quiz: true, notes: true, free: false },
+    { no: 5, title: "Writing — Report, Notice & Speech", subject: "Writing", color: "#bf360c", lessons: 6, quiz: true, notes: true, free: false },
+    { no: 6, title: "Unseen Passage & Comprehension", subject: "Reading", color: "#bf360c", lessons: 6, quiz: true, notes: true, free: false },
   ],
 };
 
@@ -201,19 +201,19 @@ const TOPPERS: Topper[] = [
 ];
 
 const RESOURCES: Resource[] = [
-  { icon: FaFileAlt,       label: "NCERT Solutions Class 12",    desc: "All subjects, all chapters",       color: "#1a237e" },
-  { icon: FaClipboardList, label: "CBSE Sample Papers 2025–26",  desc: "Latest board pattern with answers", color: "#880e4f" },
-  { icon: FaChartBar,      label: "JEE / NEET Final Notes",      desc: "Chapter-wise revision sheets",     color: "#4a148c" },
-  { icon: FaBook,          label: "Revision Notes PDF",          desc: "Quick-revision, all subjects",     color: "#1b5e20" },
+  { icon: FaFileAlt, label: "NCERT Solutions Class 12", desc: "All subjects, all chapters", color: "#1a237e" },
+  { icon: FaClipboardList, label: "CBSE Sample Papers 2025–26", desc: "Latest board pattern with answers", color: "#880e4f" },
+  { icon: FaChartBar, label: "JEE / NEET Final Notes", desc: "Chapter-wise revision sheets", color: "#4a148c" },
+  { icon: FaBook, label: "Revision Notes PDF", desc: "Quick-revision, all subjects", color: "#1b5e20" },
 ];
 
 const FEATURES: Feature[] = [
-  { icon: FaVideo,          title: "HD Concept Videos",       desc: "2,900+ lectures covering every NCERT Class 12 chapter — board-pattern solutions and JEE/NEET problems side by side.", color: "#1a237e"  },
-  { icon: FaClipboardList,  title: "Chapter-wise Tests",      desc: "320+ practice tests — CBSE board MCQs, short-answer and long-answer formats, plus JEE/NEET-style questions per chapter.", color: "#880e4f" },
-  { icon: FaAtom,           title: "JEE & NEET Final Year",   desc: "Class 12 is the most exam-critical year. Every chapter mapped to JEE Mains, JEE Advanced and NEET patterns with PYQ analysis.", color: "#4a148c" },
-  { icon: FaHeadphones,     title: "Doubt Solving",           desc: "Ask doubts anytime via text or photo — subject experts respond within 2 hours, with live crash sessions in Feb–Mar.", color: "#bf360c"  },
-  { icon: FaChartBar,       title: "Progress Tracker",        desc: "Visual dashboards: chapter completion %, test scores, board readiness index, JEE/NEET rank predictor and weak topic heatmaps.", color: "#006064" },
-  { icon: FaTrophy,         title: "Full-Syllabus Mocks",     desc: "CBSE board full-mock series with CBSE marking scheme — plus JEE Mains, JEE Advanced and NEET mock test series.", color: "#1b5e20"  },
+  { icon: FaVideo, title: "HD Concept Videos", desc: "2,900+ lectures covering every NCERT Class 12 chapter — board-pattern solutions and JEE/NEET problems side by side.", color: "#1a237e" },
+  { icon: FaClipboardList, title: "Chapter-wise Tests", desc: "320+ practice tests — CBSE board MCQs, short-answer and long-answer formats, plus JEE/NEET-style questions per chapter.", color: "#880e4f" },
+  { icon: FaAtom, title: "JEE & NEET Final Year", desc: "Class 12 is the most exam-critical year. Every chapter mapped to JEE Mains, JEE Advanced and NEET patterns with PYQ analysis.", color: "#4a148c" },
+  { icon: FaHeadphones, title: "Doubt Solving", desc: "Ask doubts anytime via text or photo — subject experts respond within 2 hours, with live crash sessions in Feb–Mar.", color: "#bf360c" },
+  { icon: FaChartBar, title: "Progress Tracker", desc: "Visual dashboards: chapter completion %, test scores, board readiness index, JEE/NEET rank predictor and weak topic heatmaps.", color: "#006064" },
+  { icon: FaTrophy, title: "Full-Syllabus Mocks", desc: "CBSE board full-mock series with CBSE marking scheme — plus JEE Mains, JEE Advanced and NEET mock test series.", color: "#1b5e20" },
 ];
 
 const FAQS: Faq[] = [
@@ -240,22 +240,22 @@ const FAQS: Faq[] = [
 ];
 
 const EXAM_DATES: ExamDate[] = [
-  { event: "Unit Test 1",    date: "Apr 20, 2026" },
-  { event: "Mid-Term Exam",  date: "Sep 25, 2026" },
-  { event: "Pre-Board 1",    date: "Dec 12, 2026" },
-  { event: "Pre-Board 2",    date: "Jan 22, 2027" },
-  { event: "CBSE Board Exam",date: "Feb–Mar 2027"  },
+  { event: "Unit Test 1", date: "Apr 20, 2026" },
+  { event: "Mid-Term Exam", date: "Sep 25, 2026" },
+  { event: "Pre-Board 1", date: "Dec 12, 2026" },
+  { event: "Pre-Board 2", date: "Jan 22, 2027" },
+  { event: "CBSE Board Exam", date: "Feb–Mar 2027" },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function Class12Page() {
-  const [activeSubject, setActiveSubject]           = useState<SubjectTab>("Mathematics");
-  const [openFaq, setOpenFaq]                       = useState<number | null>(null);
-  const [activeSubjectCard, setActiveSubjectCard]   = useState<string | null>(null);
+  const [activeSubject, setActiveSubject] = useState<SubjectTab>("Mathematics");
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeSubjectCard, setActiveSubjectCard] = useState<string | null>(null);
 
   const activeSubjectData = SUBJECTS.find((s) => s.name === activeSubject)!;
-  const activeChapters    = CHAPTERS[activeSubject];
+  const activeChapters = CHAPTERS[activeSubject];
 
   return (
     <div className="font-serif bg-[#F5F3EE] min-h-screen text-[#111]">
@@ -326,9 +326,9 @@ export default function Class12Page() {
             <div className="flex flex-wrap gap-9 mt-10">
               {[
                 ["2,900+", "Video Lectures"],
-                ["69",     "Chapters Covered"],
-                ["320+",   "Practice Tests"],
-                ["4.9★",   "Student Rating"],
+                ["69", "Chapters Covered"],
+                ["320+", "Practice Tests"],
+                ["4.9★", "Student Rating"],
               ].map(([v, l]) => (
                 <div key={l}>
                   <div className="text-xl font-bold text-[#a78bfa] font-mono">{v}</div>
@@ -347,9 +347,9 @@ export default function Class12Page() {
             </div>
 
             {([
-              ["Student's Full Name", "text",  "Nisha Sharma"],
-              ["Parent's Mobile",    "tel",   "+91 9876543210"],
-              ["Email",              "email", "nisha@email.com"],
+              ["Student's Full Name", "text", "Nisha Sharma"],
+              ["Parent's Mobile", "tel", "+91 9876543210"],
+              ["Email", "email", "nisha@email.com"],
             ] as [string, string, string][]).map(([label, type, ph]) => (
               <div key={label} className="mb-4">
                 <label className="block text-xs font-semibold text-[#555] mb-[5px] font-sans">{label}</label>
@@ -419,49 +419,33 @@ export default function Class12Page() {
       <div className="max-w-[1140px] mx-auto px-6">
 
         {/* ── STREAM BANNER ─────────────────────────────────────────── */}
-        <section className="pt-10">
-          <div className="bg-white rounded-2xl border border-[#e4d9c8] px-8 py-6">
-            <p className="text-[11px] font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-4 font-sans">
+        <section className="pt-6 md:pt-10">
+          <div className="bg-white rounded-2xl border border-[#e4d9c8] px-4 md:px-8 py-6">
+            <p className="text-[10px] md:text-[11px] font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-4 font-sans">
               🎯 Choose Your Stream &amp; Target
             </p>
-            <div className="grid grid-cols-4 gap-3.5">
+            {/* Responsive Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
               {[
-                { label: "PCM",      sub: "Maths + Physics + Chemistry",   color: "#1a237e", badge: "JEE",      icon: "📐" },
-                { label: "PCB",      sub: "Physics + Chemistry + Biology",  color: "#1b5e20", badge: "NEET",     icon: "🧬" },
-                { label: "PCMB",     sub: "All four science subjects",      color: "#4a148c", badge: "JEE+NEET", icon: "⚗️" },
-                { label: "Commerce", sub: "Accounts + Economics + BSt",     color: "#bf360c", badge: "CA / BBA", icon: "📊" },
+                { label: "PCM", sub: "Maths + Physics + Chemistry", color: "#1a237e", badge: "JEE", icon: "📐" },
+                { label: "PCB", sub: "Physics + Chemistry + Biology", color: "#1b5e20", badge: "NEET", icon: "🧬" },
+                { label: "PCMB", sub: "All four science subjects", color: "#4a148c", badge: "JEE+NEET", icon: "⚗️" },
+                { label: "Commerce", sub: "Accounts + Economics + BSt", color: "#bf360c", badge: "CA / BBA", icon: "📊" },
               ].map((s, i) => (
                 <div
                   key={i}
-                  className="rounded-[14px] px-[18px] py-4 cursor-pointer transition-transform duration-200 hover:-translate-y-[3px]"
+                  className="rounded-[14px] px-[18px] py-4 cursor-pointer transition-transform duration-200 hover:-translate-y-[3px] flex flex-col items-start"
                   style={{ background: s.color + "0a", border: `1.5px solid ${s.color}22` }}
                 >
-                  <div className="text-[22px] mb-2">{s.icon}</div>
-                  <div className="font-bold text-[15px] font-mono mb-1" style={{ color: s.color }}>{s.label}</div>
-                  <div className="text-xs text-[#777] font-sans mb-2 leading-snug">{s.sub}</div>
+                  <div className="text-[20px] md:text-[22px] mb-2">{s.icon}</div>
+                  <div className="font-bold text-[14px] md:text-[15px] font-mono mb-1" style={{ color: s.color }}>{s.label}</div>
+                  <div className="text-[11px] md:text-xs text-[#777] font-sans mb-3 leading-snug">{s.sub}</div>
                   <span
-                    className="text-[10px] font-bold px-2 py-[2px] rounded-full font-mono"
+                    className="text-[9px] md:text-[10px] font-bold px-2 py-[2px] rounded-full font-mono mt-auto"
                     style={{ color: s.color, background: s.color + "18" }}
                   >
                     {s.badge}
                   </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── EXAM DATES ────────────────────────────────────────────── */}
-        <section className="pt-6">
-          <div className="bg-white rounded-2xl border border-[#e4d9c8] px-8 py-6">
-            <p className="text-[11px] font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-5 font-sans">
-              📅 Important Exam Dates 2026–27
-            </p>
-            <div className="grid grid-cols-5 gap-4">
-              {EXAM_DATES.map((d, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-[13px] font-bold text-[#6d28d9] font-mono mb-1">{d.date}</div>
-                  <div className="text-xs text-[#666] leading-snug font-sans">{d.event}</div>
                 </div>
               ))}
             </div>
@@ -508,8 +492,8 @@ export default function Class12Page() {
                   <div className="grid grid-cols-3 gap-2 mb-4">
                     {[
                       [s.chapters, "Chapters"],
-                      [s.videos,   "Videos"],
-                      [s.tests,    "Tests"],
+                      [s.videos, "Videos"],
+                      [s.tests, "Tests"],
                     ].map(([val, lbl], j) => (
                       <div key={j} className="text-center bg-[#f9f7f4] rounded-lg py-2 px-1">
                         <div className="text-base font-bold font-mono" style={{ color: s.color }}>{val}</div>
@@ -531,29 +515,36 @@ export default function Class12Page() {
 
         {/* ── CHAPTER LIST ──────────────────────────────────────────── */}
         <section className="py-12">
-          <div className="text-center mb-10">
-            <p className="text-xs font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-2.5 font-sans">
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-[10px] md:text-xs font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-2.5 font-sans">
               Chapter Index
             </p>
-            <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] text-[#111]">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#111] leading-tight max-w-2xl mx-auto">
               NCERT Class 12 — Chapter-wise Content
             </h2>
           </div>
 
-          <div className="bg-white rounded-2xl border border-[#e4d9c8] overflow-hidden">
-            {/* Subject tabs */}
-            <div className="flex border-b border-[#e4d9c8] overflow-x-auto">
+          <div className="bg-white rounded-2xl border border-[#e4d9c8] overflow-hidden shadow-sm">
+
+            <div className="flex border-b border-[#e4d9c8] overflow-x-auto no-scrollbar scroll-smooth">
               {SUBJECT_TABS.map((t) => {
                 const subj = SUBJECTS.find((s) => s.name === t)!;
+                const isActive = activeSubject === t;
+
                 return (
                   <button
                     key={t}
                     onClick={() => setActiveSubject(t)}
-                    className="flex-1 px-3 py-[14px] text-[13px] font-semibold cursor-pointer border-none whitespace-nowrap min-w-[120px] transition-all duration-200"
+                    className={`
+              flex-1 min-w-[110px] md:min-w-[140px] px-4 py-3.5 md:py-[18px] 
+              text-[12px] md:text-[13px] font-semibold cursor-pointer 
+              border-none transition-all duration-300 ease-in-out
+              ${isActive ? 'shadow-[inset_0_-2px_0_rgba(0,0,0,0.1)]' : 'hover:bg-gray-50'}
+            `}
                     style={{
-                      background:  activeSubject === t ? subj.color : "white",
-                      color:       activeSubject === t ? "white"    : "#555",
-                      fontFamily:  activeSubject === t ? "monospace" : "sans-serif",
+                      background: isActive ? subj.color : "white",
+                      color: isActive ? "white" : "#555",
+                      fontFamily: isActive ? "monospace" : "sans-serif",
                     }}
                   >
                     {t}
@@ -662,57 +653,73 @@ export default function Class12Page() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-5">
-            {FEATURES.map((f, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[18px] px-6 py-7 border border-[#e4d9c8] cursor-pointer transition-transform duration-200 hover:-translate-y-1"
-              >
+          <section className="px-4 md:px-0">
+            {/* Grid container: Stacks on mobile, 2-col on tablet, 3-col on desktop */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {FEATURES.map((f, i) => (
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: f.color + "18" }}
+                  key={i}
+                  className="bg-white rounded-[18px] px-5 py-6 md:px-6 md:py-7 border border-[#e4d9c8] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md active:scale-[0.98]"
                 >
-                  <f.icon size={22} color={f.color} />
+                  {/* Icon Container - slightly smaller on mobile */}
+                  <div
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-4"
+                    style={{ background: f.color + "18" }}
+                  >
+                    <f.icon size={20} className="md:w-[22px]" color={f.color} />
+                  </div>
+
+                  {/* Title - adjusted font size for mobile */}
+                  <h4 className="font-serif text-base md:text-[17px] font-bold text-[#111] mb-2">
+                    {f.title}
+                  </h4>
+
+                  {/* Description - leading-relaxed helps readability on narrow screens */}
+                  <p className="text-[13px] md:text-[13.5px] text-[#666] leading-relaxed font-sans">
+                    {f.desc}
+                  </p>
                 </div>
-                <h4 className="font-serif text-[17px] font-bold text-[#111] mb-2">{f.title}</h4>
-                <p className="text-[13.5px] text-[#666] leading-relaxed font-sans">{f.desc}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </section>
         </section>
 
         {/* ── FREE RESOURCES ────────────────────────────────────────── */}
-        <section className="pb-12">
-          <div className="bg-[linear-gradient(135deg,#020008,#0a0520)] rounded-3xl px-10 py-12 border border-[rgba(110,80,255,0.15)] relative overflow-hidden">
+        <section className="pb-12 px-4 md:px-0">
+          <div className="bg-[linear-gradient(135deg,#020008,#0a0520)] rounded-3xl px-6 py-10 md:px-10 md:py-12 border border-[rgba(110,80,255,0.15)] relative overflow-hidden">
 
-            {/* Decorative circle */}
-            <div className="absolute -top-10 -right-10 w-[250px] h-[250px] rounded-full bg-[rgba(109,40,217,0.12)]" />
+            {/* Decorative circle - hidden on small mobile to avoid clutter, visible on md+ */}
+            <div className="hidden md:block absolute -top-10 -right-10 w-[250px] h-[250px] rounded-full bg-[rgba(109,40,217,0.12)]" />
 
-            {/* Formulae watermark */}
-            <div className="absolute bottom-6 right-10 pointer-events-none text-[rgba(110,80,255,0.05)] font-mono text-[11px] leading-loose">
-              <div>∫ x² dx = x³/3 + C — Integration</div>
-              <div>E = hν — Photoelectric Effect</div>
-              <div>ΔG = ΔH − TΔS — Gibbs Energy</div>
+            {/* Formulae watermark - shifted/opacity adjusted for mobile readability */}
+            <div className="absolute bottom-4 right-6 md:bottom-6 md:right-10 pointer-events-none text-[rgba(110,80,255,0.04)] md:text-[rgba(110,80,255,0.05)] font-mono text-[9px] md:text-[11px] leading-loose text-right">
+              <div className="hidden sm:block">∫ x² dx = x³/3 + C</div>
+              <div>E = hν — Photoelectric</div>
+              <div>ΔG = ΔH − TΔS</div>
             </div>
 
-            <div className="grid grid-cols-2 gap-12 items-center relative">
-              <div>
-                <p className="text-xs font-bold tracking-[0.12em] text-[#a78bfa] uppercase mb-2.5 font-sans">
+            {/* Main Grid: 1 column on mobile, 2 columns on desktop */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10">
+
+              {/* Left Content: Centered on mobile, left-aligned on desktop */}
+              <div className="text-center lg:text-left">
+                <p className="text-[10px] md:text-xs font-bold tracking-[0.12em] text-[#a78bfa] uppercase mb-2.5 font-sans">
                   100% Free Resources
                 </p>
-                <h2 className="font-serif text-[clamp(1.6rem,2.5vw,2rem)] text-white mb-3.5">
+                <h2 className="font-serif text-2xl md:text-[clamp(1.6rem,2.5vw,2rem)] text-white mb-3.5 leading-tight">
                   Free Study Material for Class 12
                 </h2>
-                <p className="text-white/60 text-[15px] leading-relaxed font-sans">
-                  Download NCERT Solutions, CBSE sample papers and JEE/NEET revision notes — no login required. Includes marking schemes and PYQ analysis.
+                <p className="text-white/60 text-sm md:text-[15px] leading-relaxed font-sans max-w-[500px] mx-auto lg:mx-0">
+                  Download NCERT Solutions, CBSE sample papers and JEE/NEET revision notes — no login required.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3.5">
+              {/* Right Grid (Cards): 1 column on very small phones, 2 columns on sm+ */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {RESOURCES.map((r, i) => (
                   <div
                     key={i}
-                    className="bg-white/[0.06] rounded-2xl px-4 py-[18px] border border-white/10 flex flex-col gap-2.5 cursor-pointer transition-transform duration-300 hover:-translate-y-[3px]"
+                    className="bg-white/[0.06] rounded-2xl px-4 py-[18px] border border-white/10 flex flex-col gap-2.5 cursor-pointer transition-all duration-300 hover:bg-white/[0.1] hover:-translate-y-[3px]"
                   >
                     <div
                       className="w-[42px] h-[42px] rounded-[10px] flex items-center justify-center"
@@ -738,7 +745,7 @@ export default function Class12Page() {
         </section>
 
         {/* ── TOPPERS ───────────────────────────────────────────────── */}
-        <section className="pb-12">
+        {/* <section className="pb-12">
           <div className="text-center mb-10">
             <p className="text-xs font-bold tracking-[0.12em] text-[#6d28d9] uppercase mb-2.5 font-sans">
               Student Success Stories
@@ -748,32 +755,8 @@ export default function Class12Page() {
             </h2>
           </div>
 
-          {/* <div className="grid grid-cols-3 gap-6">
-            {TOPPERS.map((t, i) => (
-              <div key={i} className="bg-white rounded-[18px] p-7 border border-[#e4d9c8]">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-[38px] text-[#6d28d9] leading-none font-serif">&ldquo;</div>
-                  <span className="bg-[#f3e8ff] text-[#6d28d9] text-[11px] font-bold px-[10px] py-1 rounded-full font-mono">
-                    {t.tag}
-                  </span>
-                </div>
-                <p className="text-sm text-[#555] leading-relaxed mb-5 font-sans">{t.quote}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-[#f5f0e8]">
-                  <div className="w-11 h-11 rounded-full bg-[#3b0764] text-white flex items-center justify-center font-bold text-base font-serif">
-                    {t.name[0]}
-                  </div>
-                  <div>
-                    <div className="font-bold text-sm text-[#111] font-serif">{t.name}</div>
-                    <div className="text-xs text-[#888] font-sans">{t.school}</div>
-                  </div>
-                  <span className="ml-auto bg-[#f3e8ff] text-[#3b0764] text-xs font-bold px-[10px] py-1 rounded-full font-mono">
-                    {t.score}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div> */}
-        </section>
+
+        </section> */}
 
         {/* ── FAQs ──────────────────────────────────────────────────── */}
         <section className="pb-20">

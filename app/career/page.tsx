@@ -70,13 +70,14 @@ export default function CareerPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="relative py-28  text-white overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative py-28  text-white overflow-hidden h-[50vh]  md:h-[50vh] 
+    lg:h-[70vh] ">
+        <div className="absolute inset-0 ">
           <Image
-            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1920&q=80"
+            src="/3.jpeg"
             alt="Career guidance"
             fill
-            className="object-cover opacity-25"
+            className="object-cover "
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark to-dark/10" />
         </div>

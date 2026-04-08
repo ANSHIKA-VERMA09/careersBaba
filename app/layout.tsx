@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import TopBar from '@/components/TopBar'
 
 export const metadata: Metadata = {
   title: 'CareersBaba – CUET, CAT, CLAT, IPMAT Coaching | Expert Exam Preparation',

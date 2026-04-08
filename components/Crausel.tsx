@@ -12,8 +12,16 @@ const SLIDES = [
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",
   },
+  // {
+  //   image: "/3.jpeg",
+  //   badge: "CUET 2026",
+  //   heading: "Your Success,",
+  //   highlight: "Our Vision",
+  //   sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
+  //   tag: "🎯 #1 CUET Platform in India",
+  // },
   {
-    image: "/3.jpeg",
+    image: "/001.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -21,15 +29,15 @@ const SLIDES = [
     tag: "🎯 #1 CUET Platform in India",
   },
   {
-    image: "https://images.unsplash.com/photo-1540563283646-b6e0f4762a5f?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/002.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
     sub: "Expert coaching for CUET, CAT, CLAT, and IPMAT. Join thousands of successful students who cracked their exams with CareersBaba.",
     tag: "🎯 #1 CUET Platform in India",
   },
-  {
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   {
+    image: "/003.jpeg",
     badge: "CUET 2026",
     heading: "Your Success,",
     highlight: "Our Vision",
@@ -39,10 +47,10 @@ const SLIDES = [
 ];
 
 const STATS = [
-  { value: "50,000+", label: "Students Enrolled" },
-  { value: "92%", label: "Selection Rate" },
-  { value: "340+", label: "Partner Colleges" },
-  { value: "4.9★", label: "Google Rating" },
+  { value: "2026", label: "Founded Year" },
+  { value: "10+", label: "Courses Available" },
+  { value: "Live", label: "Project Based Learning" },
+  { value: "24/7", label: "Student Support" },
 ];
 
 export default function Crausel() {
@@ -108,9 +116,7 @@ export default function Crausel() {
 
   return (
     <section
-      className="  relative 
-    h-[50vh] 
-    md:h-[50vh] 
+      className=" relative  h-[50vh]  md:h-[50vh] 
     lg:h-[70vh] 
     flex items-center 
     overflow-hidden 

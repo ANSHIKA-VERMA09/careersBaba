@@ -260,12 +260,7 @@ export default function Class11Page() {
 
   return (
     <div
-      style={{
-        fontFamily: "'Crimson Pro', Georgia, serif",
-        background: "#F5F3EE",
-        minHeight: "100vh",
-        color: "#111",
-      }}
+      className="font-serif bg-[#F5F3EE] min-h-screen text-[#111] mt-8"
     >
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
      <section className="relative overflow-hidden bg-[#06000f] py-12 px-6 lg:py-20 lg:px-12">

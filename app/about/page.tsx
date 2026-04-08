@@ -42,73 +42,68 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="relative py-28 overflow-hidden  text-white">
+      <section className="relative h-[300px] sm:h-[450px] lg:h-[70vh] overflow-hidden text-white">
+
+        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="/4.jpeg"
             fill
-            alt='about_image'
-            className="object-cover opacity-60"
+            alt="about_image"
+            className="object-cover object-center"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark" />
+          {/* Light overlay for text readability */}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-brand-400 text-sm font-semibold tracking-widest uppercase">Our Story</span>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-6">
-            About CareersBaba
-          </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Founded with a mission to make world-class exam preparation accessible to every aspiring student in India—regardless of location or background.
-          </p>
-        </div>
+
+        {/* Content - vertically & horizontally centered */}
+        
+
       </section>
 
       {/* Mission / Vision */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/5.jpeg  "
-                  alt="Students learning"
-                  fill
-                  className="object-cover"
-                />
+      <section className="py-4 md:py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+
+          <span className="text-brand-500 text- sm:text-xl font-semibold tracking-widest uppercase">
+            Who We Are
+          </span>
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark mt-3 mb-6">
+            Faculty
+          </h2> 
+
+          <p className="text-dark leading-relaxed mb-4 text-sm sm:text-base md:text-xl">
+            Ankur Sir is the founder and mentor behind Careers Baba. He holds a B.Tech degree from MNNIT Allahabad and has also appeared for the Civil Services Interview. With a strong command over Polity and General Studies, he is known as a dedicated mentor who guides students with clarity, strategy, and confidence
+          </p>
+
+          <p className="text-dark leading-relaxed mb-8 text-sm sm:text-base md:text-xl">
+            Nitika Ma’am is an inspiring mentor at Careers Baba, combining academic excellence, competitive exam experience, and a learner-first approach. She holds a B.Tech in Computer Science, has qualified UGC NET in Sociology, and has also appeared for the Civil Services Interview. Her diverse academic background and practical understanding of the aspirant journey make her a trusted guide for students seeking focused preparation, confidence, and clarity. Through Careers Baba, she is committed to empowering learners with the right direction, knowledge, and motivation to achieve success.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+            {[
+              { icon: '🎯', label: 'Result-Focused' },
+              { icon: '🤝', label: 'Mentor-Driven' },
+              { icon: '💡', label: 'Innovation-Led' },
+              { icon: '🌍', label: 'Accessible to All' },
+            ].map((v) => (
+              <div
+                key={v.label}
+                className="flex flex-col items-center justify-center bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition"
+              >
+                <span className="text-2xl mb-1">{v.icon}</span>
+                <span className="font-medium text-xs sm:text-sm">{v.label}</span>
               </div>
-             
-            </div>
-            <div>
-              <span className="text-brand-500 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-              <h2 className="font-display text-3xl font-bold text-dark mt-2 mb-6">
-                A Community of Achievers
-              </h2>
-              <p className="text-dark/60 leading-relaxed mb-4">
-                CareersBaba was born out of a simple observation: brilliant students were failing competitive exams not because of ability, but because of lack of access to quality guidance. We set out to change that.
-              </p>
-              <p className="text-dark/60 leading-relaxed mb-8">
-                Today, we're a growing community of students, educators, and mentors, all united by one goal—helping you crack your dream exam and step into the college of your choice.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: '🎯', label: 'Result-Focused' },
-                  { icon: '🤝', label: 'Mentor-Driven' },
-                  { icon: '💡', label: 'Innovation-Led' },
-                  { icon: '🌍', label: 'Accessible to All' },
-                ].map((v) => (
-                  <div key={v.label} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm">
-                    <span className="text-2xl">{v.icon}</span>
-                    <span className="font-medium text-sm">{v.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* Content */}
-      <AboutCareersBaba/>
+      <AboutCareersBaba />
 
       {/* Timeline */}
       <section className="py-24 bg-white">

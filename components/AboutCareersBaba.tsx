@@ -1,4 +1,6 @@
 import React from "react";
+import ServiceSection from "./ServiceSection";
+import Card from "./Card";
 
 export default function AboutCareersBaba() {
   const reasons = [
@@ -64,11 +66,11 @@ export default function AboutCareersBaba() {
     <div className="bg-white text-gray-900 font-sans antialiased w-full overflow-x-hidden">
 
       {/* ── HERO ── */}
-      <section className="border-b border-gray-200">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 min-h-[auto] lg:min-h-[480px]">
+      {/* <section className="border-b border-gray-200"> */}
+      {/* <div className="flex flex-col lg:grid lg:grid-cols-2 min-h-[auto] lg:min-h-[480px]"> */}
 
-          {/* Left: Text */}
-          <div className="flex flex-col justify-center px-5 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-16 border-b lg:border-b-0 lg:border-r border-gray-200">
+      {/* Left: Text */}
+      {/* <div className="flex flex-col justify-center px-5 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-16 border-b lg:border-b-0 lg:border-r border-gray-200">
             <div className="flex items-center gap-3 mb-4 sm:mb-5">
               <span className="block w-6 sm:w-7 h-0.5 bg-amber-500" />
               <span className="text-xs font-semibold tracking-widest uppercase text-amber-500">About Us</span>
@@ -82,10 +84,10 @@ export default function AboutCareersBaba() {
               Our mission is to empower students with the knowledge, skills, and confidence they
               need to achieve their career goals.
             </p>
-          </div>
+          </div> */}
 
-          {/* Right: Stats 2x2 Grid */}
-          <div className="grid grid-cols-2">
+      {/* Right: Stats 2x2 Grid */}
+      {/* <div className="grid grid-cols-2">
             {stats.map((s, i) => (
               <div
                 key={s.label}
@@ -102,12 +104,12 @@ export default function AboutCareersBaba() {
                 </span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div> */}
+      {/* </div> */}
+      {/* </section> */}
 
       {/* ── WHO WE ARE ── */}
-      <section className="border-b border-gray-200">
+      {/* <section className="border-b border-gray-200">
         <div className="w-full max-w-5xl mx-auto px-5 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-16">
           <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
             <span className="text-xs font-semibold tracking-widest uppercase text-gray-400 whitespace-nowrap">
@@ -136,35 +138,42 @@ export default function AboutCareersBaba() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── WHY CHOOSE ── */}
-      <section className="border-b border-gray-200">
-        <div className="w-full max-w-5xl mx-auto px-5 sm:px-10 lg:px-14 py-10 sm:py-14 lg:py-16">
-          <div className="flex items-center gap-3 sm:gap-4 mb-4">
-            <span className="text-xs font-semibold tracking-widest uppercase text-gray-400 whitespace-nowrap">
-              Why Choose CareersBaba
-            </span>
-            <span className="flex-1 h-px bg-gray-200" />
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-8 sm:mb-10">
-            Everything You Need to{" "}
-            <span className="italic text-amber-500">Succeed</span>
-          </h2>
+      <section className="border-b border-gray-200 bg-white dark:bg-slate-950">
+        <div className="w-full max-w-6xl mx-auto px-5 sm:px-10 lg:px-14 py-16 sm:py-20">
 
-          {/* 1 col → mobile | 2 col → tablet | 3 col → desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
-            {reasons.map((r) => (
-              <div
-                key={r.title}
-                className="bg-white p-6 sm:p-7 lg:p-8 group hover:bg-amber-50 transition-colors duration-200 relative overflow-hidden"
-              >
-                <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-amber-500 scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300" />
-                <div className="mb-3 sm:mb-4">{r.icon}</div>
-                <h3 className="font-bold text-sm sm:text-base text-gray-900 mb-2">{r.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{r.desc}</p>
-              </div>
-            ))}
+          {/* Header */}
+          <div className="flex flex-col items-center justify-center mb-12 sm:mb-16 text-center">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-red-700">
+                Our Volunteers
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              Meet Our Team <span className="italic text-amber-500 font-serif">Succeed</span>
+            </h2>
+            <div className="mt-5 h-1.5 w-24 bg-amber-500 rounded-full"></div>
+          </div>
+
+          {/* Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+          <div className="grid  grid-cols-1 sm:grid-cols-2 place-items-center  gap-10">
+
+            <Card
+              title="Er. Ankur Singhal"
+              description="Appeared for the Civil Services Interview"
+              imageSrc="/8.jpeg"
+              // category="Er. Ankur Singhal is a dedicated educator with a strong academic background in engineering from MNNIT Allahabad. He has appeared for the Civil Services Interview, showcasing his deep understanding of competitive examinations and real exam experience.
+
+              // Along with General Studies, he also specializes in Mathematics and Data Science, bridging analytical thinking with exam-oriented preparation. His expertise helps students develop both conceptual clarity and problem-solving skills."
+            />
+            <Card
+              title="Er. Nitika Dwivedi "
+              description="Appeared for the Civil Services Interview"
+              imageSrc="/9.jpeg"
+
+            />
           </div>
         </div>
       </section>

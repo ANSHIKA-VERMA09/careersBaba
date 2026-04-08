@@ -1,5 +1,7 @@
+import AiChat from '@/components/AIchatbot';
 import Crausel from '@/components/Crausel';
 import ListAllCourse from '@/components/ListAllCourse';
+import Modal from '@/components/Modal';
 import Testimonials from '@/components/Testimonials';
 import TextMarquee from '@/components/TextMarquee';
 import Video from '@/components/Video';
@@ -41,21 +43,21 @@ const services = [
 
 const testimonials = [
   {
-    name: 'Priyanka',
-    exam: 'UPTET',
-    text: 'CareerBaba helped me build strong fundamentals in data science. The projects and guidance gave me real confidence.',
+    name: 'Anushree',
+    exam: 'DataScinece',
+    text: 'CareerBaba helped me build a solid foundation in Data Science. The hands-on projects and expert mentorship gave me the confidence to work with real-world data.',
     score: 'Completed 10+ Projects'
   },
   {
-    name: 'Dhruv',
-    exam: 'Gov Exam',
-    text: 'The structured roadmap and hands-on learning made complex topics like ML and Python easy to understand.',
+    name: 'Aakash',
+    exam: 'DataSecience',
+    text: 'CareerBaba transformed my understanding of Data Science by combining theory with real-world projects, helping me gain both skills and confidence.',
     score: 'Built ML Models'
   },
   {
     name: 'Shruti',
-    exam: 'UPSC',
-    text: 'I improved my practical skills a lot. The mentorship support really helped me clear my doubts quickly.',
+    exam: 'SSC',
+    text: 'CareerBaba made SSC preparation easy for me. The guidance and practice tests helped me stay consistent and confident.',
     score: 'Internship Ready'
   },
   {
@@ -77,9 +79,9 @@ const testimonials = [
     score: 'Real-world Projects'
   },
   {
-    name: 'Riya',
-    exam: 'Data Science Program',
-    text: 'The learning environment is very supportive. It helped me stay consistent and improve every day.',
+    name: 'Priyanka',
+    exam: 'UPTET',
+    text: 'The UPTET preparation environment was very motivating. The study material and mock tests helped me understand the exam pattern and improve my performance step by step.',
     score: 'Job Preparation'
   }
 ];
@@ -93,8 +95,8 @@ export default function Home() {
       <Crausel/>
       <TextMarquee/>
       <ListAllCourse/>
-        {/* <Testimonials/> */}
-
+      {/* <AiChat/> */}
+      <Modal/>
       
 
       {/* Why Us */}
@@ -171,7 +173,7 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold text-dark text-xl">{t.name}</div>
-                    <div className="text-dark/40 text-lg">{t.exam}</div>
+                    <div className="text-dark/40 text-lg">{t.exam}</div> 
                   </div>
                   {/* <div className="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1.5 rounded-full border border-brand-200">
                     {t.score}

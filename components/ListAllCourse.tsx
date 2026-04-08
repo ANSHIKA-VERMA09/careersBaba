@@ -88,8 +88,8 @@ export default function ListAllCourse(): JSX.Element {
           Explore by Category
         </p> */}
         <h1 className="text-[clamp(2rem,5vw,3.2rem)] font-extrabold text-gray-900 leading-tight">
-          What are you <br />
-          <span className=" text-[#FF6B35]">preparing for?</span>
+          New Batch Start CUET <br />
+          <span className=" text-[#FF6B35]">and UPSC </span>
         </h1>
         <p className=" font-light text-lg text-gray-600 mt-3 leading-relaxed">
           Choose your path — curated resources, expert guidance, and structured learning await.
