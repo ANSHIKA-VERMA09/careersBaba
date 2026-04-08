@@ -1,4 +1,6 @@
+"use client"
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface CardProps {
   title: string;
@@ -9,16 +11,17 @@ interface CardProps {
 }
 
 export default function Card({ title, price, category, description, imageSrc }: CardProps) {
+  const [open,setOpen]=useState(false);
   return (
     <div className="group w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:bg-slate-900">
       
       {/* Next.js Optimized Image */}
-      <div className="relative h-64 overflow-hidden">
+        <div className="relative h-64 w-full  overflow-hidden bg-slate-200">
         <Image 
           src={imageSrc} 
           alt={title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-contain  transition-transform duration-500 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, 384px"
         />
         
@@ -34,9 +37,11 @@ export default function Card({ title, price, category, description, imageSrc }: 
           {description}
         </p>
 
-        <button className="w-full rounded-xl bg-slate-900 py-3 font-medium text-white transition-colors hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600">
+
+        <button onClick={()=>setOpen(c=>!c)} className="w-full rounded-xl bg-slate-900 py-3 font-medium text-white transition-colors hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600">
           View Details
         </button>
+        {open &&  <p className='mt-6'>{category}</p>}
       </div>
     </div>
   );

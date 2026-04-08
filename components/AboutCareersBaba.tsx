@@ -142,32 +142,41 @@ export default function AboutCareersBaba() {
 
       {/* ── WHY CHOOSE ── */}
       <section className="border-b border-gray-200 bg-white dark:bg-slate-950">
-      <div className="w-full max-w-6xl mx-auto px-5 sm:px-10 lg:px-14 py-16 sm:py-20">
-        
-        {/* Header */}
-        <div className="flex flex-col items-center justify-center mb-12 sm:mb-16 text-center">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-red-700">
-              Our Volunteers
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-            Meet Our Team <span className="italic text-amber-500 font-serif">Succeed</span>
-          </h2>
-          <div className="mt-5 h-1.5 w-24 bg-amber-500 rounded-full"></div>
-        </div>
+        <div className="w-full max-w-6xl mx-auto px-5 sm:px-10 lg:px-14 py-16 sm:py-20">
 
-        {/* Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
-       <div className="grid  grid-cols-1 sm:grid-cols-2 place-items-center  gap-10">
- 
-   <Card 
-    title="Er. Ankur Singhal" 
-    description="Appeared for the Civil Services Interview" 
-    imageSrc="/8.jpeg" 
-  />
-</div>
-      </div>
-    </section>
+          {/* Header */}
+          <div className="flex flex-col items-center justify-center mb-12 sm:mb-16 text-center">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-red-700">
+                Our Volunteers
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              Meet Our Team <span className="italic text-amber-500 font-serif">Succeed</span>
+            </h2>
+            <div className="mt-5 h-1.5 w-24 bg-amber-500 rounded-full"></div>
+          </div>
+
+          {/* Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+          <div className="grid  grid-cols-1 sm:grid-cols-2 place-items-center  gap-10">
+
+            <Card
+              title="Er. Ankur Singhal"
+              description="Appeared for the Civil Services Interview"
+              imageSrc="/8.jpeg"
+              // category="Er. Ankur Singhal is a dedicated educator with a strong academic background in engineering from MNNIT Allahabad. He has appeared for the Civil Services Interview, showcasing his deep understanding of competitive examinations and real exam experience.
+
+              // Along with General Studies, he also specializes in Mathematics and Data Science, bridging analytical thinking with exam-oriented preparation. His expertise helps students develop both conceptual clarity and problem-solving skills."
+            />
+            <Card
+              title="Er. Nitika Dwivedi "
+              description="Appeared for the Civil Services Interview"
+              imageSrc="/9.jpeg"
+
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── VISION & MISSION ── */}
       <section className="border-b border-gray-200">
