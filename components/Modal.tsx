@@ -28,7 +28,7 @@ export default function Modal() {
         break;
       case "Contact":
         reply =
-          "Call us at +91-9897753555 or email support@careerbaba.com";
+          "Call us at +91-9897753555 or email  info@careersbaba.com";
         break;
       default:
         reply = "Sorry, I didn’t understand that.";
